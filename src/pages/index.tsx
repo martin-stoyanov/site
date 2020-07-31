@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Image from '../components/image';
 import Layout from '../components/layout';
+import { breakpoints } from '../utils';
 
 const typing = keyframes`
   from {
@@ -29,7 +30,10 @@ const TypedText = styled.div`
   overflow: hidden;
   border-right: 3px solid;
   font-family: Roboto Mono, monospace;
-  font-size: 38px;
+  font-size: 24px;
+  @media ${breakpoints.sm} {
+    font-size: 38px;
+  }
 `;
 
 // based on https://codepen.io/denic/pen/GRoOxbM

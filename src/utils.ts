@@ -1,8 +1,8 @@
 // screen breakpoints
 export const breakpoints = {
-  xs: '(min-width: 0px',
-  sm: '(min-width: 600px)',
-  md: '(min-width: 960px)',
-  lg: '(min-width: 1280px)',
-  xl: '(min-width: 1920px)',
+  xs: '(max-width: 0px',
+  sm: '(max-width: 600px)',
+  md: '(max-width: 960px)',
+  lg: '(max-width: 1280px)',
+  xl: '(max-width: 1920px)',
 };

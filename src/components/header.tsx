@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { breakpoints } from '../utils';
 import Image from './image';
 
 const StyledLink = styled((props) => <Link {...props} />)`
@@ -8,6 +9,10 @@ const StyledLink = styled((props) => <Link {...props} />)`
   text-decoration: none;
   text-transform: lowercase;
   padding: 25px 0;
+  font-size: 16px;
+  @media ${breakpoints.sm} {
+    font-size: 14px;
+  }
   &:hover {
     color: #e6b8b8;
     &:before {

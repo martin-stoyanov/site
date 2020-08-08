@@ -30,9 +30,9 @@ const TypedText = styled.div`
   overflow: hidden;
   border-right: 3px solid;
   font-family: Roboto Mono, monospace;
-  font-size: 24px;
+  font-size: 38px;
   @media ${breakpoints.sm} {
-    font-size: 38px;
+    font-size: 24px;
   }
 `;
 

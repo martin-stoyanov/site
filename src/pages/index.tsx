@@ -1,53 +1,35 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import Image from '../components/image';
+import styled from 'styled-components';
 import Layout from '../components/layout';
-import { breakpoints } from '../utils';
-
-const typing = keyframes`
-  from {
-    width: 0
-  } 
-`;
-const blink = keyframes`
-  50% {
-    border-color: transparent
-  }
-`;
-const TypedDivWrapper = styled.div`
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30vh;
-`;
-
-const TypedText = styled.div`
-  width: ${(p) => p.width}ch;
-  animation: ${typing} 2s steps(${(p) => p.width}),
-    ${blink} 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: Roboto Mono, monospace;
-  font-size: 38px;
-  @media ${breakpoints.sm} {
-    font-size: 24px;
-  }
-`;
-
-// based on https://codepen.io/denic/pen/GRoOxbM
-const TypedDiv = (props) => (
-  <TypedDivWrapper>
-    <TypedText width={props.width}>{props.children}</TypedText>
-  </TypedDivWrapper>
-);
+import { TypingIntro } from '../components/typingIntro';
 
 export default function UsersList() {
   return (
     <Layout>
-      <TypedDiv width={14}>hi i'm martin.</TypedDiv>
-      <div style={{ width: '100px' }}>{/* <Image /> */}</div>
+      <TypingIntro />
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '100vw',
+          marginTop: '5vh',
+          height: 'auto',
+        }}
+      >
+        <div
+          style={{
+            width: '80vw',
+            height: '100%',
+            border: '2px solid #4f4763',
+            fontFamily: 'Roboto Mono, monospace',
+          }}
+        >
+          <div style={{ padding: '10px', fontSize: '18px' }}>
+            I'm a software developer interested in Javascript, React, and UX.
+            I'm currently a senior at Cornell University.
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

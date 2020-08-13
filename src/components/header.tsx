@@ -41,7 +41,7 @@ const StyledNav = styled.nav`
   li {
     display: inline-block;
     margin-left: 5vw;
-    padding-top: 25px;
+    padding-top: 4vh;
     position: relative;
   }
 `;
@@ -49,11 +49,11 @@ const StyledNav = styled.nav`
 const ImageWrapper = styled.div`
   float: left;
   width: 50px;
-  padding: 10px 0;
+  padding: 1.5vh 0;
 `;
 
 const HeaderWrapper = styled.div`
-  background: #2c2835;
+  background: #4f4763;
   width: 80vw;
   padding-left: 10vw;
   padding-right: 10vw;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { breakpoints } from '../utils';
+import { breakpoints } from '../../utils';
 
 const typing = keyframes`
   from {

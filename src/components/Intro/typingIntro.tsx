@@ -24,7 +24,7 @@ const TypedText = styled.div`
   font-family: Roboto Mono, monospace;
   font-size: 38px;
   @media ${breakpoints.sm} {
-    font-size: 24px;
+    font-size: 28px;
   }
 `;
 

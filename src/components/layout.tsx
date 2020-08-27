@@ -8,10 +8,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${(p) => p.theme.fontFamily};
     background: ${(p) => (p.theme.color === 'dark' ? '#282C35' : 'white')};
     color: ${(p) => (p.theme.color === 'dark' ? 'white' : '#282C35')};
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     margin: auto;
+    overflow-x: hidden;
   }
 `;
 export default function Layout({ children }) {

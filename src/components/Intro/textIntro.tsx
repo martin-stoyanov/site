@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../../utils';
 
 const IntroContent = styled.div`
   width: 80vw;
   height: 100%;
   margin-top: 5vh;
-  //border: 2px solid #4f4763;
   font-family: Roboto Mono, monospace;
+  font-size: 18px;
+  width: 80vw;
+  @media ${breakpoints.sm} {
+    width: 85vw;
+    font-size: 16px;
+  }
 `;
 
 const IntroWrapper = styled.div`
@@ -20,8 +26,8 @@ const IntroWrapper = styled.div`
 export const TextIntro = () => (
   <IntroWrapper>
     <IntroContent>
-      <div style={{ padding: '10px', fontSize: '18px' }}>
-        I'm a software developer interested in Javascript, React, and UX. I'm
+      <div>
+        I'm a software developer who likes Javascript, React, and UX. I'm
         currently a senior at Cornell University.
       </div>
     </IntroContent>

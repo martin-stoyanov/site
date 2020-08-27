@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
     margin: auto;
+    overflow-x: hidden;
   }
 `;
 export default function Layout({ children }) {

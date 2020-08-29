@@ -25,7 +25,14 @@ export default function UsersList() {
             minWidth: 'max-content',
           }}
         >
-          Projects: WIP
+          <p
+            style={{
+              fontFamily: 'Roboto Mono, monospace',
+              fontSize: '28px',
+            }}
+          >
+            projects: WIP
+          </p>
         </h2>
         <div
           style={{

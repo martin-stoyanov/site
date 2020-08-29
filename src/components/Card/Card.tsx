@@ -7,10 +7,16 @@ const CardDiv = styled.div`
   width: 80%;
   max-width: 600px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: #005e9b;
   text-align: center;
   padding: 2em;
+  @media ${breakpoints.sm} {
+    padding: 2em 1em;
+  }
+  @media ${breakpoints.md} {
+    flex-direction: column;
+  }
 `;
 
 export const Card: React.FC = ({ children }) => <CardDiv>{children}</CardDiv>;

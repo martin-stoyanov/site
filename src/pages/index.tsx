@@ -15,7 +15,7 @@ export default function UsersList() {
           position: 'absolute',
           top: 0,
           marginTop: '105vh',
-          left: '10vw',
+          width: '-webkit-fill-available',
         }}
       >
         <h2
@@ -23,27 +23,23 @@ export default function UsersList() {
             display: 'grid',
             placeItems: 'center',
             minWidth: 'max-content',
+            fontFamily: 'Roboto Mono, monospace',
+            fontSize: '28px',
           }}
         >
-          <p
-            style={{
-              fontFamily: 'Roboto Mono, monospace',
-              fontSize: '28px',
-            }}
-          >
-            projects: WIP
-          </p>
+          Work Experience: WIP
         </h2>
         <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-around',
-            width: '100vw',
             height: 'fit-content',
-            maxWidth: '80vw',
+            marginLeft: '5vw',
+            marginRight: '5vw',
           }}
         >
+          <CMSXCard />
           <CMSXCard />
         </div>
       </div>

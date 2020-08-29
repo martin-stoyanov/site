@@ -17,7 +17,7 @@ const IconList = styled.ul`
 `;
 
 const IconLink = styled.a`
-  color: #5bcbf0;
+  color: #c7b5f5;
   opacity: 0.5;
   font-size: 1.25rem;
 `;
@@ -26,6 +26,7 @@ const CardImage = styled.img`
   width: 100px;
   margin-bottom: 1em;
   @media ${breakpoints.md} {
+    width: 80px;
     margin-bottom: 0.5em;
   }
   border-radius: 50%;
@@ -40,7 +41,7 @@ const CardTitle = styled.h2`
     display: block;
     height: 2px;
     width: 2em;
-    background: #5bcbf0;
+    background: #c7b5f5;
     opacity: 0.3;
     margin: 0.8em 0 0;
     @media ${breakpoints.md} {
@@ -52,7 +53,7 @@ const CardTitle = styled.h2`
 const CardDescription = styled.p`
   font-family: Roboto Mono, monospace;
   font-size: 1.25rem;
-  color: #5bcbf0;
+  color: #c7b5f5;
 `;
 
 const CardBody = styled.p`
@@ -61,7 +62,7 @@ const CardBody = styled.p`
   @media ${breakpoints.sm} {
     font-size: 0.75rem;
   }
-  color: #5bcbf0;
+  color: #c7b5f5;
   line-height: 1.5;
 `;
 
@@ -69,10 +70,6 @@ export const CMSXCard = () => (
   <Card>
     <CardIntro>
       <CardImage src={cornell_seal} alt="" />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      />
       <IconList>
         <li className="card-icon">
           <IconLink

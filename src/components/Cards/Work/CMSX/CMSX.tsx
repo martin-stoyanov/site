@@ -60,7 +60,8 @@ const CardBody = styled.p`
   margin-bottom: 0;
   font-size: 1rem;
   @media ${breakpoints.sm} {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    margin-bottom: 2em;
   }
   color: #c7b5f5;
   line-height: 1.5;

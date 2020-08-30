@@ -22,6 +22,7 @@ const CardDiv = styled.div`
   border-radius: 3%;
   @media ${breakpoints.sm} {
     padding: 2em 1em;
+    margin: 0 1em;
   }
   @media ${breakpoints.md} {
     flex-direction: column;
@@ -30,10 +31,13 @@ const CardDiv = styled.div`
 
 const DownIcon = styled.i`
   position: relative;
-  top: -55px;
+  top: -60px;
   color: white;
   opacity: 0.6;
   font-size: 30px;
+  @media ${breakpoints.sm} {
+    top: -50px;
+  }
   &:hover {
     // color: #e6b8b8;
     cursor: pointer;

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 import { CardMain } from '../CardMain';
 import { CardIntro } from '../CardIntro';
-import { breakpoints } from '../../../utils';
+import { breakpoints } from '../../../../utils';
 // @ts-ignore
-import cornell_seal from './cornell_seal.png';
+import bw_logo from './bw_logo.png';
 
 const IconList = styled.ul`
   display: flex;
@@ -66,16 +66,16 @@ const CardBody = styled.p`
   line-height: 1.5;
 `;
 
-export const CMSXCard = () => (
+export const BWCard = () => (
   <Card>
     <CardIntro>
-      <CardImage src={cornell_seal} alt="" />
+      <CardImage src={bw_logo} alt="" />
       <IconList>
         <li className="card-icon">
           <IconLink
-            href="https://research.cs.cornell.edu/Projects/cms/"
+            href="https://www.bandwidth.com/"
             target="_blank"
-            style={{ ariaLabel: 'Project Link' }}
+            style={{ ariaLabel: 'Company Link' }}
           >
             <i className="fas fa-link" />
           </IconLink>
@@ -83,12 +83,12 @@ export const CMSXCard = () => (
       </IconList>
     </CardIntro>
     <CardMain>
-      <CardTitle>Cornell University</CardTitle>
-      <CardDescription>Software Developer</CardDescription>
+      <CardTitle>Bandwidth Inc.</CardTitle>
+      <CardDescription>Software Dev Intern (Remote)</CardDescription>
       <CardBody>
-        Part of the team that develops and maintains Cornell’s in-house Course
-        Management System, used by over 8000 students and course staff as an
-        alternative to Blackboard and Canvas.
+        Worked with the frontend team on the Bandwidth Dashboard, one of the
+        company's main products and used by clients to purchase and manage
+        orders.
       </CardBody>
     </CardMain>
   </Card>

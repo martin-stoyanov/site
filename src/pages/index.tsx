@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import { TypingIntro } from '../components/Intro/typingIntro';
 import { TextIntro } from '../components/Intro/textIntro';
-import { CMSXCard } from '../components/Card/Cards/CMSX';
+import { CMSXCard } from '../components/Cards/Work/CMSX/CMSX';
+import { BWCard } from '../components/Cards/Work/Bandwidth/BWCard';
 
 export default function UsersList() {
   return (
@@ -27,7 +28,7 @@ export default function UsersList() {
             fontSize: '28px',
           }}
         >
-          Work Experience: WIP
+          Work Experience
         </h2>
         <div
           style={{
@@ -40,7 +41,7 @@ export default function UsersList() {
           }}
         >
           <CMSXCard />
-          <CMSXCard />
+          <BWCard />
         </div>
       </div>
     </Layout>

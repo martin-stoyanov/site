@@ -5,6 +5,8 @@ import { TypingIntro } from '../components/Intro/typingIntro';
 import { TextIntro } from '../components/Intro/textIntro';
 import { CMSXCard } from '../components/Cards/Work/CMSX/CMSX';
 import { BWCard } from '../components/Cards/Work/Bandwidth/BWCard';
+import { CardHeader } from '../components/Cards/CardHeader';
+import { CardWrapper } from '../components/Cards/CardWrapper';
 
 export default function UsersList() {
   return (
@@ -13,38 +15,12 @@ export default function UsersList() {
         <TypingIntro />
         <TextIntro />
       </div>
-      <div
-        style={{
-          // position: 'absolute',
-          // top: 0,
-          // marginTop: '105vh',
-          width: '-webkit-fill-available',
-        }}
-      >
-        <h2
-          style={{
-            display: 'grid',
-            placeItems: 'center',
-            minWidth: 'max-content',
-            fontFamily: 'Roboto Mono, monospace',
-            fontSize: '28px',
-          }}
-        >
-          Work Experience
-        </h2>
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-around',
-            height: 'fit-content',
-            marginLeft: '5vw',
-            marginRight: '5vw',
-          }}
-        >
+      <div>
+        <CardHeader>Work Experience</CardHeader>
+        <CardWrapper>
           <CMSXCard />
           <BWCard />
-        </div>
+        </CardWrapper>
       </div>
     </Layout>
   );

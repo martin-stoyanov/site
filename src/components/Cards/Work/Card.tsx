@@ -12,7 +12,12 @@ const CardParent = styled.div`
 `;
 
 const CardDiv = styled.div`
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.1s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+  }
   width: 100%;
   max-width: 500px;
   display: flex;

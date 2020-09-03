@@ -9,13 +9,15 @@ import { BWCard } from '../components/Cards/Work/Bandwidth/BWCard';
 export default function UsersList() {
   return (
     <Layout>
-      <TypingIntro />
-      <TextIntro />
+      <div style={{ minHeight: '90vh' }}>
+        <TypingIntro />
+        <TextIntro />
+      </div>
       <div
         style={{
-          position: 'absolute',
-          top: 0,
-          marginTop: '105vh',
+          // position: 'absolute',
+          // top: 0,
+          // marginTop: '105vh',
           width: '-webkit-fill-available',
         }}
       >

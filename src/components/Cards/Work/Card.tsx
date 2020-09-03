@@ -6,6 +6,9 @@ const CardParent = styled.div`
   display: flex;
   flex-direction: column;
   place-items: center;
+  @media ${breakpoints.sm} {
+    width: 250px;
+  }
 `;
 
 const CardDiv = styled.div`
@@ -24,7 +27,7 @@ const CardDiv = styled.div`
     padding: 2em 1em;
     margin: 0 1em;
   }
-  @media ${breakpoints.md} {
+  @media ${breakpoints.sm} {
     flex-direction: column;
   }
 `;

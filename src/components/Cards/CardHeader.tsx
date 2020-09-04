@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from '../../utils';
 
 const StyledHeader = styled.h2`
   display: grid;
   place-items: center;
   min-width: max-content;
   font-family: Roboto Mono, monospace;
-  font-size: 28px;
+  font-size: 34px;
+  @media ${breakpoints.sm} {
+    font-size: 28px;
+  }
 `;
 
 export const CardHeader = ({ children }) => (

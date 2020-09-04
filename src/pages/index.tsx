@@ -11,11 +11,21 @@ import { CardWrapper } from '../components/Cards/CardWrapper';
 export default function UsersList() {
   return (
     <Layout>
-      <div style={{ minHeight: '90vh' }}>
+      <div
+        style={{
+          minHeight: '74vh',
+          background: '-webkit-linear-gradient(#282C35, #313A42)',
+        }}
+      >
         <TypingIntro />
         <TextIntro />
       </div>
-      <div>
+      <div
+        style={{
+          paddingTop: '5vh',
+          background: '-webkit-linear-gradient(#3D4D54, #414064)',
+        }}
+      >
         <CardHeader>Work Experience</CardHeader>
         <CardWrapper>
           <CMSXCard />

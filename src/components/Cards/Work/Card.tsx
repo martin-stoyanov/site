@@ -22,7 +22,7 @@ const CardDiv = styled.div`
   max-width: 500px;
   display: flex;
   flex-direction: row;
-  background: #4f4763;
+  background: #44526a;
   text-align: center;
   padding: 2em;
   padding-bottom: 3em;

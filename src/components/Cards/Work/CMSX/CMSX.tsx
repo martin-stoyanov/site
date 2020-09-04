@@ -7,6 +7,8 @@ import { breakpoints } from '../../../../utils';
 // @ts-ignore
 import cornell_seal from './cornell_seal.png';
 
+const color = '#bbcaf6';
+
 const IconList = styled.ul`
   display: flex;
   justify-content: space-around;
@@ -17,7 +19,7 @@ const IconList = styled.ul`
 `;
 
 const IconLink = styled.a`
-  color: #c7b5f5;
+  color: ${color};
   opacity: 0.5;
   font-size: 1.25rem;
 `;
@@ -41,7 +43,7 @@ const CardTitle = styled.h2`
     display: block;
     height: 2px;
     width: 2em;
-    background: #c7b5f5;
+    background: ${color};
     opacity: 0.3;
     margin: 0.8em 0 0;
     @media ${breakpoints.md} {
@@ -53,7 +55,7 @@ const CardTitle = styled.h2`
 const CardDescription = styled.p`
   font-family: Roboto Mono, monospace;
   font-size: 1.25rem;
-  color: #c7b5f5;
+  color: ${color};
 `;
 
 const CardBody = styled.p`
@@ -63,7 +65,7 @@ const CardBody = styled.p`
     font-size: 0.85rem;
     margin-bottom: 2em;
   }
-  color: #c7b5f5;
+  color: ${color};
   line-height: 1.5;
 `;
 

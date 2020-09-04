@@ -53,7 +53,9 @@ const ImageWrapper = styled.div`
 `;
 
 const HeaderWrapper = styled.div`
-  background: #4f4763;
+  min-height: 10vh;
+  // background: #3d4d54;
+  background: -webkit-linear-gradient(#3d4d54, #343f47);
   width: 80vw;
   padding-left: 10vw;
   padding-right: 10vw;

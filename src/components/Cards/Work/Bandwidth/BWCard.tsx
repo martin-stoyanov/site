@@ -39,12 +39,13 @@ const CardTitle = styled.h2`
   font-size: 1.5rem;
   font-family: Roboto Mono, monospace;
   &:after {
-    content: '';
+    font-size: 0.8rem;
+    content: 'May 2020 - July 2020';
     display: block;
-    height: 2px;
-    width: 2em;
-    background: ${color};
-    opacity: 0.3;
+    // height: 2px;
+    // width: 2em;
+    // background: ${color};
+    // opacity: 0.3;
     margin: 0.8em 0 0;
     @media ${breakpoints.md} {
       margin: 0.8em auto 0;

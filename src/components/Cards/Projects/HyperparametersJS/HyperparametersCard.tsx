@@ -46,7 +46,7 @@ export const HyperparametersCard = () => (
       <IconList>
         <li className="card-icon">
           <IconLink
-            href="https://www.bandwidth.com/"
+            href="https://hyperjs.herokuapp.com/"
             target="_blank"
             style={{ ariaLabel: 'HyperparametersJS Website' }}
           >
@@ -55,7 +55,7 @@ export const HyperparametersCard = () => (
         </li>
         <li className="card-icon">
           <IconLink
-            href="https://github.com/atanasster/hyperparameters"
+            href="https://github.com/martin-stoyanov/hyperparameters-site"
             target="_blank"
             style={{ ariaLabel: 'HyperparametersJS Github Link' }}
           >

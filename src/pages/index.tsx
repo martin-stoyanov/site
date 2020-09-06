@@ -16,7 +16,8 @@ export default function UsersList() {
       <div
         style={{
           minHeight: '74vh',
-          background: '-webkit-linear-gradient(#282C35, #313A42)',
+          // background: '-webkit-linear-gradient(#282C35, #313A42)',
+          background: '#282C35',
         }}
       >
         <TypingIntro />
@@ -37,7 +38,7 @@ export default function UsersList() {
       <div
         style={{
           padding: '2vh 0',
-          background: '-webkit-linear-gradient(#282C35, #313A42)',
+          background: '#282C35',
         }}
       >
         <CardHeader>Projects</CardHeader>

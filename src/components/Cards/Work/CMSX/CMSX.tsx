@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Card } from '../Card';
-import { CardMain } from '../CardMain';
 import { CardIntro } from '../CardIntro';
 import { breakpoints } from '../../../../utils';
 // @ts-ignore
@@ -35,43 +34,52 @@ const CardImage = styled.img`
   // border: 5px solid white;
 `;
 
-const CardTitle = styled.h2`
-  font-size: 1.5rem;
-  font-family: Roboto Mono, monospace;
-  &:after {
-    font-size: 0.8rem;
-    content: 'October 2019 - Present';
-    display: block;
-    // height: 2px;
-    // width: 2em;
-    // background: ${color};
-    // opacity: 0.3;
-    margin: 0.8em 0 0;
-    @media ${breakpoints.md} {
-      margin: 0.8em auto 0;
-    }
-  }
-`;
+const shortText = () => (
+  <p>
+    Part of the team that develops and maintains Cornell’s in-house Course
+    Management System, used by over 8000 students and course staff as an
+    alternative to Blackboard and Canvas. Since Jan 2020, I've been a front-end
+    lead of the team.
+  </p>
+);
 
-const CardDescription = styled.p`
-  font-family: Roboto Mono, monospace;
-  font-size: 1.25rem;
-  color: ${color};
-`;
-
-const CardBody = styled.p`
-  margin-bottom: 0;
-  font-size: 1rem;
-  @media ${breakpoints.sm} {
-    font-size: 0.85rem;
-    margin-bottom: 2em;
-  }
-  color: ${color};
-  line-height: 1.5;
-`;
+const expandedText = () => (
+  <div>
+    <ul>
+      <li>
+        Part of the team that develops and maintains Cornell’s in-house Course
+        Management System, used by over8000 students and course staff as an
+        alternative to Blackboard and Canvas.
+      </li>
+      <li>
+        Helped move from Java app to REST-API based React/Redux/Typescript app.
+      </li>
+      <li>
+        Beta released Spring semester 2020, full release Fall semester 2020
+      </li>
+      <li>
+        <i>Work examples</i>: Create reusable components, create forms w/
+        validation (e.g. a regrade request form), ADA compliance, create API
+        endpoints w/ Axios
+      </li>
+      <li>
+        As a front-end lead since Jan 2020, I've: introduced new members to the
+        codebase, delegated tasks + helped team members with them, reviewed pull
+        requests and provided actionable feedback when necessary, and added code
+        formatting and pre-commit hooks using Husky & Prettier to keep codebase
+        clean and consistent
+      </li>
+    </ul>
+  </div>
+);
 
 export const CMSXCard = () => (
-  <Card>
+  <Card
+    title="Cornell University"
+    description="Software Developer"
+    shortText={shortText()}
+    expandedText={expandedText()}
+  >
     <CardIntro>
       <CardImage src={cornell_seal} alt="" />
       <IconList>
@@ -86,14 +94,10 @@ export const CMSXCard = () => (
         </li>
       </IconList>
     </CardIntro>
-    <CardMain>
-      <CardTitle>Cornell University</CardTitle>
-      <CardDescription>Software Developer</CardDescription>
-      <CardBody>
-        Part of the team that develops and maintains Cornell’s in-house Course
-        Management System, used by over 8000 students and course staff as an
-        alternative to Blackboard and Canvas.
-      </CardBody>
-    </CardMain>
+    {/* <CardMain>
+        <CardTitle>Cornell University</CardTitle>
+        <CardDescription>Software Developer</CardDescription>
+        <CardBody>{shortBody}</CardBody>
+      </CardMain> */}
   </Card>
 );

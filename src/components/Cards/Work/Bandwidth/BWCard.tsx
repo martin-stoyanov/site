@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Card } from '../Card';
-import { CardMain } from '../CardMain';
 import { CardIntro } from '../CardIntro';
 import { breakpoints } from '../../../../utils';
 // @ts-ignore
@@ -35,43 +34,51 @@ const CardImage = styled.img`
   // border: 5px solid white;
 `;
 
-const CardTitle = styled.h2`
-  font-size: 1.5rem;
-  font-family: Roboto Mono, monospace;
-  &:after {
-    font-size: 0.8rem;
-    content: 'May 2020 - July 2020';
-    display: block;
-    // height: 2px;
-    // width: 2em;
-    // background: ${color};
-    // opacity: 0.3;
-    margin: 0.8em 0 0;
-    @media ${breakpoints.md} {
-      margin: 0.8em auto 0;
-    }
-  }
-`;
+const shortText = () => (
+  <p>
+    Worked with the frontend team on the Bandwidth Dashboard, one of the
+    company's main products and used by clients to purchase and manage orders.
+    Gained experience contributing a live production codebase and creating tests
+    for it
+  </p>
+);
 
-const CardDescription = styled.p`
-  font-family: Roboto Mono, monospace;
-  font-size: 1.25rem;
-  color: ${color};
-`;
-
-const CardBody = styled.p`
-  margin-bottom: 0;
-  font-size: 1rem;
-  @media ${breakpoints.sm} {
-    font-size: 0.85rem;
-    margin-bottom: 2em;
-  }
-  color: ${color};
-  line-height: 1.5;
-`;
+const expandedText = () => (
+  <div>
+    <ul>
+      <li>
+        Worked with the frontend team on the Bandwidth Dashboard, one of the
+        company's main products and used by clients to purchase and manage
+        orders.
+      </li>
+      <li>
+        Built search forms using Formik and used SWR + GraphQL to communicate
+        with Bandwidth’s API
+      </li>
+      <li>
+        For each contribution: created tests on a∼1 : 1 test/code ratio. Used
+        Jest + React Testing Library to create unit and integration tests. Used
+        Cypress to create functional tests
+      </li>
+      <li>
+        Discussed design ideas with UX team to improve mobile responsiveness on
+        Bandwidth’s in-house visual component library
+      </li>
+      <li>
+        Implemented UX team's prototypes into the component library, which is
+        built on top of Material-UI with React
+      </li>
+    </ul>
+  </div>
+);
 
 export const BWCard = () => (
-  <Card>
+  <Card
+    title="Bandwidth Inc."
+    description="Software Dev Intern (Remote)"
+    shortText={shortText()}
+    expandedText={expandedText()}
+  >
     <CardIntro>
       <CardImage src={bw_logo} alt="" />
       <IconList>
@@ -86,14 +93,5 @@ export const BWCard = () => (
         </li>
       </IconList>
     </CardIntro>
-    <CardMain>
-      <CardTitle>Bandwidth Inc.</CardTitle>
-      <CardDescription>Software Dev Intern (Remote)</CardDescription>
-      <CardBody>
-        Worked with the frontend team on the Bandwidth Dashboard, one of the
-        company's main products and used by clients to purchase and manage
-        orders.
-      </CardBody>
-    </CardMain>
   </Card>
 );

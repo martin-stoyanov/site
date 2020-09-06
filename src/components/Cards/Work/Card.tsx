@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { CardMain } from './CardMain';
 import { breakpoints } from '../../../utils';
+
+const color = '#bbcaf6';
 
 const CardParent = styled.div`
   display: flex;
@@ -12,6 +15,8 @@ const CardParent = styled.div`
 `;
 
 const CardDiv = styled.div`
+  // height: -moz-available;
+  // height: -webkit-fill-available;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.1s ease-in-out;
   &:hover {
@@ -30,7 +35,7 @@ const CardDiv = styled.div`
   border-radius: 3%;
   @media ${breakpoints.sm} {
     padding: 2em 1em;
-    margin: 0 1em;
+    margin: 1em;
   }
   @media ${breakpoints.sm} {
     flex-direction: column;
@@ -38,6 +43,9 @@ const CardDiv = styled.div`
 `;
 
 const DownIcon = styled.i`
+  transform: ${(props) => (props.isExpanded ? 'rotate(180deg);' : 'rotate(0);')}
+  transition: transform 0.5s linear;
+  // transform: rotate(180deg);
   position: relative;
   top: -60px;
   color: white;
@@ -47,20 +55,70 @@ const DownIcon = styled.i`
     top: -50px;
   }
   &:hover {
-    // color: #e6b8b8;
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
   }
 `;
 
-export const Card: React.FC = ({ children }) => (
-  <CardParent>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <CardDiv>{children}</CardDiv>
-    <DownIcon className="fas fa-arrow-circle-down" />
-  </CardParent>
-);
+const CardTitle = styled.h2`
+  font-size: 1.5rem;
+  font-family: Roboto Mono, monospace;
+  &:after {
+    font-size: 0.8rem;
+    content: 'October 2019 - Present';
+    display: block;
+    margin: 0.8em 0 0;
+    @media ${breakpoints.md} {
+      margin: 0.8em auto 0;
+    }
+  }
+`;
+
+const CardDescription = styled.p`
+  font-family: Roboto Mono, monospace;
+  font-size: 1.25rem;
+  color: ${color};
+`;
+
+const CardBody = styled.p`
+  margin-bottom: 0;
+  font-size: 1rem;
+  @media ${breakpoints.sm} {
+    font-size: 0.85rem;
+    margin-bottom: 2em;
+  }
+  color: ${color};
+  line-height: 1.5;
+`;
+
+export const Card: React.FC<{
+  title: string;
+  description: string;
+  shortText: JSX.Element;
+  expandedText?: JSX.Element;
+}> = ({ title, description, shortText, expandedText, children }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <CardParent>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      />
+      <CardDiv>
+        {children}
+        <CardMain>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
+          <CardBody>{isExpanded ? expandedText : shortText}</CardBody>
+        </CardMain>
+      </CardDiv>
+      <DownIcon
+        className="fas fa-arrow-circle-down"
+        isExpanded={isExpanded}
+        onClick={() => setIsExpanded(!isExpanded)}
+      />
+    </CardParent>
+  );
+};

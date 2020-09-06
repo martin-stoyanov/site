@@ -12,6 +12,8 @@ const CardParent = styled.div`
 `;
 
 const CardDiv = styled.div`
+  height: -moz-available;
+  height: -webkit-fill-available;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.1s ease-in-out;
   &:hover {
@@ -30,7 +32,7 @@ const CardDiv = styled.div`
   border-radius: 3%;
   @media ${breakpoints.sm} {
     padding: 2em 1em;
-    margin: 0 1em;
+    margin: 1em;
   }
   @media ${breakpoints.sm} {
     flex-direction: column;
@@ -61,6 +63,6 @@ export const Card: React.FC = ({ children }) => (
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <CardDiv>{children}</CardDiv>
-    <DownIcon className="fas fa-arrow-circle-down" />
+    {/* <DownIcon className="fas fa-arrow-circle-down" /> */}
   </CardParent>
 );

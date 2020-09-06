@@ -16,37 +16,46 @@ export default function UsersList() {
       <div
         style={{
           minHeight: '74vh',
-          // background: '-webkit-linear-gradient(#282C35, #313A42)',
           background: '#282C35',
         }}
       >
         <TypingIntro />
         <TextIntro />
       </div>
-      <div
+      <a
+        id="work"
         style={{
           padding: '2vh 0',
           background: '#3D4D54',
         }}
       >
-        <CardHeader>Work Experience</CardHeader>
-        <CardWrapper>
-          <CMSXCard />
-          <BWCard />
-        </CardWrapper>
-      </div>
-      <div
-        style={{
-          padding: '2vh 0',
-          background: '#282C35',
-        }}
-      >
-        <CardHeader>Projects</CardHeader>
-        <CardWrapper>
-          <ViewFinder />
-          <HyperparametersCard />
-        </CardWrapper>
-      </div>
+        <div
+          style={{
+            padding: '2vh 0',
+            background: '#3D4D54',
+          }}
+        >
+          <CardHeader>Work Experience</CardHeader>
+          <CardWrapper>
+            <CMSXCard />
+            <BWCard />
+          </CardWrapper>
+        </div>
+      </a>
+      <a id="projects">
+        <div
+          style={{
+            padding: '2vh 0',
+            background: '#282C35',
+          }}
+        >
+          <CardHeader>Projects</CardHeader>
+          <CardWrapper>
+            <ViewFinder />
+            <HyperparametersCard />
+          </CardWrapper>
+        </div>
+      </a>
     </Layout>
   );
 }

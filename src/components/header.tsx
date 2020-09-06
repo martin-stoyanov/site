@@ -76,10 +76,10 @@ export const Header = ({ siteTitle }) => (
     <StyledNav>
       <ul>
         <li>
-          <StyledLink to="/">Projects</StyledLink>
+          <StyledLink to="#work">Work</StyledLink>
         </li>
         <li>
-          <StyledLink to="/">About</StyledLink>
+          <StyledLink to="#projects">Projects</StyledLink>
         </li>
         <li>
           <StyledLink to="https://github.com/martin-stoyanov" target="_blank">

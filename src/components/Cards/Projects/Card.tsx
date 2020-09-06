@@ -22,7 +22,7 @@ const CardDiv = styled.div`
   max-width: 500px;
   display: flex;
   flex-direction: row;
-  background: -webkit-linear-gradient(#3f485a, #414064);
+  background: -webkit-linear-gradient(#414064, #3f485a);
   text-align: center;
   padding: 2em;
   padding-bottom: 3em;

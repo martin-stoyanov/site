@@ -54,8 +54,8 @@ const ImageWrapper = styled.div`
 
 const HeaderWrapper = styled.div`
   min-height: 10vh;
-  // background: #3d4d54;
-  background: -webkit-linear-gradient(#3d4d54, #37444b);
+  background: #3d4d54;
+  // background: -webkit-linear-gradient(#3d4d54, #37444b);
   width: 80vw;
   padding-left: 10vw;
   padding-right: 10vw;

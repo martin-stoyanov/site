@@ -8,6 +8,7 @@ const IntroContent = styled.div`
   margin-top: 5vh;
   font-family: Roboto Mono, monospace;
   font-size: 18px;
+  text-align: center;
   width: 80vw;
   @media ${breakpoints.sm} {
     width: 85vw;

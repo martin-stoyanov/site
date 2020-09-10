@@ -22,13 +22,7 @@ export default function UsersList() {
         <TypingIntro />
         <TextIntro />
       </div>
-      <a
-        id="work"
-        style={{
-          padding: '2vh 0',
-          background: '#3D4D54',
-        }}
-      >
+      <a id="work">
         <div
           style={{
             padding: '2vh 0',

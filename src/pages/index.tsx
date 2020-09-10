@@ -40,7 +40,7 @@ export default function UsersList() {
         <div
           style={{
             padding: '2vh 0',
-            background: '#282C35',
+            background: '#44526A',
           }}
         >
           <CardHeader>Projects</CardHeader>

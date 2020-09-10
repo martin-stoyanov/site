@@ -41,7 +41,7 @@ const StyledNav = styled.nav`
   }
   li {
     display: inline-block;
-    margin-left: 5vw;
+    margin-left: 3vw;
     padding-top: 4vh;
     position: relative;
   }

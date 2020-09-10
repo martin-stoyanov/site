@@ -66,7 +66,7 @@ const CardTitle = styled.h2`
   font-family: Roboto Mono, monospace;
   &:after {
     font-size: 0.8rem;
-    content: 'October 2019 - Present';
+    content: '${(props) => props.date}';
     display: block;
     margin: 0.8em 0 0;
     @media ${breakpoints.md} {
@@ -95,11 +95,12 @@ const CardBody = styled.p`
 export const Card: React.FC<{
   title: string;
   description: string;
+  date: string;
   shortText: JSX.Element;
   expandedText?: JSX.Element;
-}> = ({ title, description, shortText, expandedText, children }) => {
+}> = ({ title, description, shortText, expandedText, date, children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  console.log(date);
   return (
     <CardParent>
       <link
@@ -109,7 +110,7 @@ export const Card: React.FC<{
       <CardDiv>
         {children}
         <CardMain>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle date={date}>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
           <CardBody>{isExpanded ? expandedText : shortText}</CardBody>
         </CardMain>

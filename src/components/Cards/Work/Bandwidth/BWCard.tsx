@@ -75,6 +75,7 @@ const expandedText = () => (
 export const BWCard = () => (
   <Card
     title="Bandwidth Inc."
+    date="May 2020 - July 2020"
     description="Software Dev Intern (Remote)"
     shortText={shortText()}
     expandedText={expandedText()}

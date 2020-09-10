@@ -77,6 +77,7 @@ export const CMSXCard = () => (
   <Card
     title="Cornell University"
     description="Software Developer"
+    date="October 2019 - Present"
     shortText={shortText()}
     expandedText={expandedText()}
   >

@@ -10,6 +10,7 @@ const StyledLink = styled((props) => <Link {...props} />)`
   text-transform: lowercase;
   padding: 25px 0;
   font-size: 16px;
+  font-family: Roboto Mono, monospace;
   @media ${breakpoints.sm} {
     font-size: 14px;
   }

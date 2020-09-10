@@ -19,6 +19,10 @@ export default function Layout({ children }) {
     <ThemeProvider
       theme={{ fontFamily: 'Montserrat, sans-serif', color: 'dark' }}
     >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+        rel="stylesheet"
+      />
       <GlobalStyle />
       <Header siteTitle={'myheader'} />
       {children}

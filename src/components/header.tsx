@@ -32,6 +32,35 @@ const StyledLink = styled((props) => <Link {...props} />)`
   }
 `;
 
+const StyledA = styled((props) => <a {...props} />)`
+  color: ${(p) => (p.theme.color === 'dark' ? 'white' : '#282C35')};
+  text-decoration: none;
+  text-transform: lowercase;
+  padding: 25px 0;
+  font-size: 16px;
+  font-family: Roboto Mono, monospace;
+  @media ${breakpoints.sm} {
+    font-size: 14px;
+  }
+  &:hover {
+    color: #e6b8b8;
+    cursor: pointer;
+    &:before {
+      width: 100%;
+      transition: all ease-in-out 250ms;
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #e6b8b8;
+    position: absolute;
+    top: 0;
+    width: 0%;
+  }
+`;
+
 const StyledNav = styled.nav`
   float: right;
   ul {
@@ -83,9 +112,9 @@ export const Header = ({ siteTitle }) => (
           <StyledLink to="#projects">Projects</StyledLink>
         </li>
         <li>
-          <StyledLink to="https://github.com/martin-stoyanov" target="_blank">
+          <StyledA href="https://github.com/martin-stoyanov" target="_blank">
             Github
-          </StyledLink>
+          </StyledA>
         </li>
       </ul>
     </StyledNav>

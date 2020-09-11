@@ -35,12 +35,12 @@ const CardImage = styled.img`
 `;
 
 const shortText = () => (
-  <p>
+  <span>
     Worked with the frontend team on the Bandwidth Dashboard, one of the
     company's main products and used by clients to purchase and manage orders.
     Gained experience contributing a live production codebase and creating tests
     for it
-  </p>
+  </span>
 );
 
 const expandedText = () => (

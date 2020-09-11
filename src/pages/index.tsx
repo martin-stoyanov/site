@@ -22,7 +22,7 @@ export default function UsersList() {
         <TypingIntro />
         <TextIntro />
       </div>
-      <a id="work">
+      <span id="work">
         <div
           style={{
             padding: '2vh 0',
@@ -35,8 +35,8 @@ export default function UsersList() {
             <BWCard />
           </CardWrapper>
         </div>
-      </a>
-      <a id="projects">
+      </span>
+      <span id="projects">
         <div
           style={{
             padding: '2vh 0',
@@ -49,7 +49,7 @@ export default function UsersList() {
             <HyperparametersCard />
           </CardWrapper>
         </div>
-      </a>
+      </span>
     </Layout>
   );
 }

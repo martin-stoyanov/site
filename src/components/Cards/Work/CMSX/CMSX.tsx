@@ -35,12 +35,12 @@ const CardImage = styled.img`
 `;
 
 const shortText = () => (
-  <p>
+  <span>
     Part of the team that develops and maintains Cornell’s in-house Course
     Management System, used by over 8000 students and course staff as an
     alternative to Blackboard and Canvas. Since Jan 2020, I've been a front-end
     lead of the team.
-  </p>
+  </span>
 );
 
 const expandedText = () => (

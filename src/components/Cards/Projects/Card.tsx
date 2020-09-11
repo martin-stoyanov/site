@@ -10,6 +10,9 @@ const CardParent = styled.div`
   @media ${breakpoints.sm} {
     width: 250px;
   }
+  @media ${breakpoints.md} {
+    min-width: 70vw;
+  }
 `;
 
 const CardDiv = styled.div`

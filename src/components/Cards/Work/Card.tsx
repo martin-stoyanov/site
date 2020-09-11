@@ -12,6 +12,9 @@ const CardParent = styled.div`
   @media ${breakpoints.sm} {
     width: 250px;
   }
+  @media ${breakpoints.md} {
+    min-width: 70vw;
+  }
 `;
 
 const CardDiv = styled.div`
@@ -52,7 +55,7 @@ const DownIcon = styled.i`
   opacity: 0.6;
   font-size: 30px;
   @media ${breakpoints.sm} {
-    top: -50px;
+    top: -60px;
   }
   &:hover {
     cursor: pointer;
@@ -100,7 +103,7 @@ export const Card: React.FC<{
   expandedText?: JSX.Element;
 }> = ({ title, description, shortText, expandedText, date, children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  console.log(date);
+
   return (
     <CardParent>
       <link

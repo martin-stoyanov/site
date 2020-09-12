@@ -5,7 +5,7 @@ import { breakpoints } from '../../../utils';
 const CardMainDiv = styled.div`
   text-align: left;
   margin-left: 2em;
-  @media ${breakpoints.md} {
+  @media ${breakpoints.sm} {
     text-align: center;
     margin-left: 0;
   }

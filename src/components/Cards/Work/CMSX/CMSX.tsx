@@ -48,7 +48,7 @@ const expandedText = () => (
     <ul>
       <li>
         Part of the team that develops and maintains Cornell’s in-house Course
-        Management System, used by over8000 students and course staff as an
+        Management System, used by over 8000 students and course staff as an
         alternative to Blackboard and Canvas.
       </li>
       <li>

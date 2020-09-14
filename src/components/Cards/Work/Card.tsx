@@ -45,12 +45,16 @@ const CardDiv = styled.div`
   }
 `;
 
-const DownIcon = styled.i`
+// need a wrapper so the rotate animation will work
+const DownIconWrapper = styled.span`
   transform: ${(props) => (props.isExpanded ? 'rotate(180deg);' : 'rotate(0);')}
-  transition: transform 0.5s linear;
-  // transform: rotate(180deg);
+  // transform: ${(props) => console.log(props)}
+  transition: transform 0.3s linear;
   position: relative;
   top: -60px;
+`;
+
+const DownIcon = styled.i`
   color: white;
   opacity: 0.6;
   font-size: 30px;
@@ -118,11 +122,12 @@ export const Card: React.FC<{
           <CardBody>{isExpanded ? expandedText : shortText}</CardBody>
         </CardMain>
       </CardDiv>
-      <DownIcon
-        className="fas fa-arrow-circle-down"
+      <DownIconWrapper
         isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
-      />
+      >
+        <DownIcon className="fas fa-arrow-circle-down" />
+      </DownIconWrapper>
     </CardParent>
   );
 };

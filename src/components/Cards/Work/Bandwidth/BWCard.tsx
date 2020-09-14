@@ -52,8 +52,8 @@ const expandedText = () => (
         orders.
       </li>
       <li>
-        Built search forms using Formik and used SWR + GraphQL to communicate
-        with Bandwidth’s API
+        Built search forms using Formik and used GraphQL to communicate with
+        Bandwidth’s API
       </li>
       <li>
         For each contribution: created tests on a∼1 : 1 test/code ratio. Used

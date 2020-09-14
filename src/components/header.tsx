@@ -15,19 +15,19 @@ const StyledLink = styled((props) => <Link {...props} />)`
     font-size: 14px;
   }
   &:hover {
-    color: #e6b8b8;
+    color: #c6b3ff;
     &:before {
       width: 100%;
-      transition: all ease-in-out 250ms;
     }
   }
   &:before {
+    transition: all ease-in-out 250ms;
     content: '';
     display: block;
-    height: 5px;
-    background-color: #e6b8b8;
-    position: absolute;
-    top: 0;
+    height: 1px;
+    background-color: #c6b3ff;
+    position: relative;
+    top: 25px;
     width: 0%;
   }
 `;
@@ -43,20 +43,20 @@ const StyledA = styled((props) => <a {...props} />)`
     font-size: 14px;
   }
   &:hover {
-    color: #e6b8b8;
+    color: #c6b3ff;
     cursor: pointer;
     &:before {
       width: 100%;
-      transition: all ease-in-out 250ms;
     }
   }
   &:before {
+    transition: all ease-in-out 250ms;
     content: '';
     display: block;
-    height: 5px;
-    background-color: #e6b8b8;
-    position: absolute;
-    top: 0;
+    height: 1px;
+    background-color: #c6b3ff;
+    position: relative;
+    top: 25px;
     width: 0%;
   }
 `;
@@ -85,7 +85,6 @@ const ImageWrapper = styled.div`
 const HeaderWrapper = styled.div`
   min-height: 10vh;
   background: #3d4d54;
-  // background: -webkit-linear-gradient(#3d4d54, #37444b);
   width: 80vw;
   padding-left: 10vw;
   padding-right: 10vw;

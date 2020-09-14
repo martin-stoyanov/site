@@ -11,6 +11,7 @@ const StyledLink = styled((props) => <Link {...props} />)`
   padding: 25px 0;
   font-size: 16px;
   font-family: Roboto Mono, monospace;
+  transition: color ease-in-out 250ms;
   @media ${breakpoints.sm} {
     font-size: 14px;
   }
@@ -39,6 +40,7 @@ const StyledA = styled((props) => <a {...props} />)`
   padding: 25px 0;
   font-size: 16px;
   font-family: Roboto Mono, monospace;
+  transition: color ease-in-out 250ms;
   @media ${breakpoints.sm} {
     font-size: 14px;
   }

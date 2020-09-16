@@ -13,6 +13,7 @@ const StyledLink = styled((props) => <Link {...props} />)`
   font-family: Roboto Mono, monospace;
   transition: color ease-in-out 250ms;
   @media ${breakpoints.sm} {
+    display: ${(p) => (p.optional ? 'none' : 'visible')};
     font-size: 14px;
   }
   &:hover {
@@ -107,10 +108,15 @@ export const Header = ({ siteTitle }) => (
     <StyledNav>
       <ul>
         <li>
-          <StyledLink to="#work">Work</StyledLink>
+          <StyledLink to="/#work">Work</StyledLink>
         </li>
         <li>
-          <StyledLink to="#projects">Projects</StyledLink>
+          <StyledLink to="/#projects" optional={true}>
+            Projects
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink to="/blog">Blog</StyledLink>
         </li>
         <li>
           <StyledA href="https://github.com/martin-stoyanov" target="_blank">

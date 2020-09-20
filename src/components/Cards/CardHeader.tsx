@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { breakpoints } from '../../utils';
 
 const StyledHeader = styled.h2`
+  color: ${(p) => p.color};
   display: grid;
   place-items: center;
   min-width: max-content;
@@ -13,6 +14,6 @@ const StyledHeader = styled.h2`
   }
 `;
 
-export const CardHeader = ({ children }) => (
-  <StyledHeader>{children}</StyledHeader>
+export const CardHeader = ({ color = 'white', children }) => (
+  <StyledHeader color={color}>{children}</StyledHeader>
 );

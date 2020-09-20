@@ -18,19 +18,18 @@ const CardParent = styled.div`
 `;
 
 const CardDiv = styled.div`
-  // height: -moz-available;
-  // height: -webkit-fill-available;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.1s ease-in-out;
+  border: 0.3rem solid #b3ccff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
   &:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(200, 200, 200, 0.3);
     transition: box-shadow 0.3s ease-in-out;
   }
   width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: row;
-  background: -webkit-linear-gradient(#3f485a, #414064);
+  background: rgba(179, 204, 255, 0.2);
   text-align: center;
   padding: 2em;
   padding-bottom: 3em;
@@ -48,7 +47,6 @@ const CardDiv = styled.div`
 // need a wrapper so the rotate animation will work
 const DownIconWrapper = styled.span`
   transform: ${(props) => (props.isExpanded ? 'rotate(180deg);' : 'rotate(0);')}
-  // transform: ${(props) => console.log(props)}
   transition: transform 0.3s linear;
   position: relative;
   top: -60px;

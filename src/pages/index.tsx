@@ -26,10 +26,10 @@ export default function UsersList() {
         <div
           style={{
             padding: '2vh 0',
-            background: '#3D4D54',
+            background: 'rgba(179, 204, 255, 0.1)',
           }}
         >
-          <CardHeader>Work Experience</CardHeader>
+          <CardHeader color="#b3ccff">Work Experience</CardHeader>
           <CardWrapper>
             <CMSXCard />
             <BWCard />
@@ -39,11 +39,11 @@ export default function UsersList() {
       <span id="projects">
         <div
           style={{
+            marginTop: '2vh',
             padding: '2vh 0',
-            background: '#44526A',
           }}
         >
-          <CardHeader>Projects</CardHeader>
+          <CardHeader color="#deb1c0">Projects</CardHeader>
           <CardWrapper>
             <ViewFinder />
             <HyperparametersCard />

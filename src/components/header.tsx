@@ -111,7 +111,7 @@ export const Header = ({ siteTitle }) => (
           <StyledLink to="/#work">Work</StyledLink>
         </li>
         <li>
-          <StyledLink to="/#projects" optional={true}>
+          <StyledLink to="/#projects" optional={'true'}>
             Projects
           </StyledLink>
         </li>

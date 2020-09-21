@@ -17,8 +17,6 @@ const CardParent = styled.div`
 
 const CardDiv = styled.div`
   border: 0.3rem solid #deb1c0;
-  height: -moz-available;
-  height: -webkit-fill-available;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   &:hover {

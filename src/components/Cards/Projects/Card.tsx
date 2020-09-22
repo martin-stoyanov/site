@@ -5,7 +5,7 @@ import { breakpoints } from '../../../utils';
 const CardParent = styled.div`
   display: flex;
   flex-direction: column;
-  max-height: 350px;
+  height: fit-content;
   place-items: center;
   @media ${breakpoints.sm} {
     width: 250px;

@@ -85,7 +85,7 @@ const ImageWrapper = styled.div`
   padding: 1.5vh 0;
 `;
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   min-height: 10vh;
   background: #3d4d54;
   width: 80vw;

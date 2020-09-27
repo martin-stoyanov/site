@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { breakpoints } from '../utils';
@@ -12,42 +12,12 @@ const StyledLink = styled((props) => <Link {...props} />)`
   font-size: 16px;
   font-family: Roboto Mono, monospace;
   transition: color ease-in-out 250ms;
-  @media ${breakpoints.sm} {
-    display: ${(p) => (p.optional ? 'none' : 'visible')};
+  @media ${breakpoints.md} {
     font-size: 14px;
+    padding: 0.5rem 1rem;
   }
   &:hover {
     color: #c6b3ff;
-    &:before {
-      width: 100%;
-    }
-  }
-  &:before {
-    transition: all ease-in-out 250ms;
-    content: '';
-    display: block;
-    height: 1px;
-    background-color: #c6b3ff;
-    position: relative;
-    top: 25px;
-    width: 0%;
-  }
-`;
-
-const StyledA = styled((props) => <a {...props} />)`
-  color: ${(p) => (p.theme.color === 'dark' ? 'white' : '#282C35')};
-  text-decoration: none;
-  text-transform: lowercase;
-  padding: 25px 0;
-  font-size: 16px;
-  font-family: Roboto Mono, monospace;
-  transition: color ease-in-out 250ms;
-  @media ${breakpoints.sm} {
-    font-size: 14px;
-  }
-  &:hover {
-    color: #c6b3ff;
-    cursor: pointer;
     &:before {
       width: 100%;
     }
@@ -66,23 +36,15 @@ const StyledA = styled((props) => <a {...props} />)`
 
 const StyledNav = styled.nav`
   float: right;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  li {
-    display: inline-block;
-    margin-left: 3vw;
-    padding-top: 4vh;
-    position: relative;
+  @media ${breakpoints.sm} {
+    width: 100%;
   }
 `;
 
 const ImageWrapper = styled.div`
   float: left;
   width: 50px;
-  padding: 1.5vh 0;
+  padding: 25px 0;
 `;
 
 const HeaderWrapper = styled.header`
@@ -96,38 +58,94 @@ const HeaderWrapper = styled.header`
     display: table;
     clear: both;
   }
+  @media ${breakpoints.sm} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
-export const Header = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <Link to="/">
-      <ImageWrapper>
-        <Image maxWidth="50px" style={{ border: '4px solid red' }} />
-      </ImageWrapper>
-    </Link>
-    <StyledNav>
-      <ul>
-        <li>
-          <StyledLink to="/#work">Work</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/#projects" optional={'true'}>
-            Projects
-          </StyledLink>
-        </li>
-        <li>
-          <StyledLink to="/blog">Blog</StyledLink>
-        </li>
-        <li>
-          <StyledA href="https://github.com/martin-stoyanov" target="_blank">
-            Github
-          </StyledA>
-        </li>
-      </ul>
-    </StyledNav>
-  </HeaderWrapper>
-);
+const ToggleButton = styled.a`
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  @media ${breakpoints.sm} {
+    display: flex;
+  }
+`;
 
-Header.defaultProps = {
-  siteTitle: ``,
+const ToggleBar = styled.span`
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+`;
+
+const NavUL = styled.ul`
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @media ${breakpoints.sm} {
+    display: ${(props) => (props.toggleOpen ? 'flex;' : 'none')};
+    flex-direction: column;
+  }
+`;
+
+const NavLI = styled.li`
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+  padding: 25px 10px;
+  position: relative;
+  @media ${breakpoints.sm} {
+    padding-top: 0.5vh;
+    padding-bottom: 1.5vh;
+    text-align: center;
+    flex-direction: row;
+  }
+`;
+
+export const Header: React.FC = () => {
+  const [toggleOpen, setToggleOpen] = useState<boolean>(false);
+  return (
+    <HeaderWrapper>
+      <Link to="/">
+        <ImageWrapper>
+          <Image maxWidth="50px" style={{ border: '4px solid red' }} />
+        </ImageWrapper>
+      </Link>
+      <ToggleButton href="#" onClick={() => setToggleOpen(!toggleOpen)}>
+        <ToggleBar className="bar" />
+        <ToggleBar className="bar" />
+        <ToggleBar className="bar" />
+      </ToggleButton>
+      <StyledNav toggleOpen={toggleOpen}>
+        <NavUL toggleOpen={toggleOpen}>
+          <NavLI>
+            <StyledLink to="/#work">Work</StyledLink>
+          </NavLI>
+          <NavLI>
+            <StyledLink to="/#projects">Projects</StyledLink>
+          </NavLI>
+          <NavLI>
+            <StyledLink to="/blog">Blog</StyledLink>
+          </NavLI>
+          <NavLI>
+            <StyledLink
+              href="https://github.com/martin-stoyanov"
+              target="_blank"
+            >
+              Github
+            </StyledLink>
+          </NavLI>
+        </NavUL>
+      </StyledNav>
+    </HeaderWrapper>
+  );
 };

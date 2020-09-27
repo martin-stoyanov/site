@@ -104,8 +104,8 @@ const NavLI = styled.li`
   padding: 25px 10px;
   position: relative;
   @media ${breakpoints.sm} {
-    padding-top: 0.5vh;
-    padding-bottom: 1.5vh;
+    padding-top: 0px;
+    padding-bottom: 20px;
     text-align: center;
     flex-direction: row;
   }

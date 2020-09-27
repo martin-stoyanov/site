@@ -84,6 +84,10 @@ const ToggleBar = styled.span`
   width: 100%;
   background-color: white;
   border-radius: 10px;
+  display: none;
+  @media ${breakpoints.sm} {
+    display: flex;
+  }
 `;
 
 const NavUL = styled.ul`
@@ -101,7 +105,8 @@ const NavLI = styled.li`
   display: flex;
   flex-direction: column;
   display: inline-block;
-  padding: 25px 10px;
+  padding-top: 40px;
+  padding-right: 20px;
   position: relative;
   @media ${breakpoints.sm} {
     padding-top: 0px;

@@ -142,10 +142,7 @@ export const Header: React.FC = () => {
             <StyledLink to="/blog">Blog</StyledLink>
           </NavLI>
           <NavLI>
-            <StyledLink
-              href="https://github.com/martin-stoyanov"
-              target="_blank"
-            >
+            <StyledLink to="https://github.com/martin-stoyanov" target="_blank">
               Github
             </StyledLink>
           </NavLI>

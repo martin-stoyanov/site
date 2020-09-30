@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         rel="stylesheet"
       />
       <GlobalStyle />
-      <Header siteTitle={'myheader'} />
+      <Header />
       {children}
     </ThemeProvider>
   );

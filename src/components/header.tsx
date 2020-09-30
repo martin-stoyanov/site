@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { breakpoints } from '../utils';
 import Image from './image';
 
+import './header.css';
+
 const StyledLink = styled((props) => <Link {...props} />)`
   color: ${(p) => (p.theme.color === 'dark' ? 'white' : '#282C35')};
   text-decoration: none;

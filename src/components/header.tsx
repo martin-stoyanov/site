@@ -8,13 +8,12 @@ const StyledLink = styled((props) => <Link {...props} />)`
   color: ${(p) => (p.theme.color === 'dark' ? 'white' : '#282C35')};
   text-decoration: none;
   text-transform: lowercase;
-  padding: 25px 0;
   font-size: 16px;
   font-family: Roboto Mono, monospace;
   transition: color ease-in-out 250ms;
   @media ${breakpoints.md} {
     font-size: 14px;
-    padding: 0.5rem 1rem;
+    // padding: 0.5rem 1rem;
   }
   &:hover {
     color: #c6b3ff;
@@ -48,7 +47,6 @@ const ImageWrapper = styled.div`
 `;
 
 const HeaderWrapper = styled.header`
-  min-height: 10vh;
   background: #3d4d54;
   width: 80vw;
   padding-left: 10vw;

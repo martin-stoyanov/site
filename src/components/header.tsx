@@ -126,9 +126,9 @@ export const Header: React.FC = () => {
         </ImageWrapper>
       </Link>
       <ToggleButton href="#" onClick={() => setToggleOpen(!toggleOpen)}>
-        <ToggleBar className="bar" />
-        <ToggleBar className="bar" />
-        <ToggleBar className="bar" />
+        <ToggleBar />
+        <ToggleBar />
+        <ToggleBar />
       </ToggleButton>
       <StyledNav toggleOpen={toggleOpen}>
         <NavUL toggleOpen={toggleOpen}>

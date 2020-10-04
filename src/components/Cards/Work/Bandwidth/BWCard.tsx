@@ -83,7 +83,7 @@ export const BWCard = () => (
     <CardIntro>
       <CardImage src={bw_logo} alt="" />
       <IconList>
-        <li className="card-icon">
+        <li>
           <IconLink
             href="https://www.bandwidth.com/"
             target="_blank"

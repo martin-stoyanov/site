@@ -44,7 +44,7 @@ export const ViewFinder = () => (
     <CardMain>
       <CardTitle>ViewFinder</CardTitle>
       <IconList>
-        <li className="card-icon">
+        <li>
           <IconLink
             href="https://travel-bucket.foxhatleo.now.sh/"
             target="_blank"
@@ -53,7 +53,7 @@ export const ViewFinder = () => (
             <i className="fas fa-link" />
           </IconLink>
         </li>
-        <li className="card-icon">
+        <li>
           <IconLink
             href="https://github.com/foxhatleo/travel-bucket-frontend"
             target="_blank"

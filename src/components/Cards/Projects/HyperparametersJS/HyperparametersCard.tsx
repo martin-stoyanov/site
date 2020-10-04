@@ -44,7 +44,7 @@ export const HyperparametersCard = () => (
     <CardMain>
       <CardTitle>HyperparametersJS</CardTitle>
       <IconList>
-        <li className="card-icon">
+        <li>
           <IconLink
             href="https://hyperjs.herokuapp.com/"
             target="_blank"
@@ -53,7 +53,7 @@ export const HyperparametersCard = () => (
             <i className="fas fa-link" />
           </IconLink>
         </li>
-        <li className="card-icon">
+        <li>
           <IconLink
             href="https://github.com/martin-stoyanov/hyperparameters-site"
             target="_blank"

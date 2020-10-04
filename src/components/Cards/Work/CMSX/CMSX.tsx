@@ -84,7 +84,7 @@ export const CMSXCard = () => (
     <CardIntro>
       <CardImage src={cornell_seal} alt="" />
       <IconList>
-        <li className="card-icon">
+        <li>
           <IconLink
             href="https://research.cs.cornell.edu/Projects/cms/"
             target="_blank"

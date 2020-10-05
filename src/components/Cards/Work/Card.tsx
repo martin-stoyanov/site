@@ -120,12 +120,12 @@ export const Card: React.FC<{
           <CardBody>{isExpanded ? expandedText : shortText}</CardBody>
         </CardMain>
       </CardDiv>
-      <DownIconWrapper
+      {/* <DownIconWrapper
         isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <DownIcon className="fas fa-arrow-circle-down" />
-      </DownIconWrapper>
+      </DownIconWrapper> */}
     </CardParent>
   );
 };

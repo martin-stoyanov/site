@@ -42,23 +42,6 @@ const CardDiv = styled.div`
   }
 `;
 
-const DownIcon = styled.i`
-  position: relative;
-  top: -60px;
-  color: white;
-  opacity: 0.6;
-  font-size: 30px;
-  @media ${breakpoints.sm} {
-    top: -50px;
-  }
-  &:hover {
-    // color: #e6b8b8;
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-  }
-`;
-
 export const Card: React.FC = ({ children }) => (
   <CardParent>
     <link
@@ -66,6 +49,5 @@ export const Card: React.FC = ({ children }) => (
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <CardDiv>{children}</CardDiv>
-    {/* <DownIcon className="fas fa-arrow-circle-down" /> */}
   </CardParent>
 );

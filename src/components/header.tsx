@@ -118,6 +118,12 @@ const NavLI = styled.li`
 
 export const Header: React.FC = () => {
   const [toggleOpen, setToggleOpen] = useState<boolean>(false);
+
+  const changeToggle = () => {
+    console.log('toggle changeing');
+    setToggleOpen(!toggleOpen);
+  };
+
   return (
     <HeaderWrapper>
       <Link to="/">
@@ -132,16 +138,16 @@ export const Header: React.FC = () => {
       </ToggleButton>
       <StyledNav toggleOpen={toggleOpen}>
         <NavUL toggleOpen={toggleOpen}>
-          <NavLI>
+          <NavLI onClick={changeToggle}>
             <StyledLink to="/#work">Work</StyledLink>
           </NavLI>
-          <NavLI>
+          <NavLI onClick={changeToggle}>
             <StyledLink to="/#projects">Projects</StyledLink>
           </NavLI>
-          <NavLI>
+          <NavLI onClick={changeToggle}>
             <StyledLink to="/blog">Blog</StyledLink>
           </NavLI>
-          <NavLI>
+          <NavLI onClick={changeToggle}>
             <StyledLink to="https://github.com/martin-stoyanov" target="_blank">
               Github
             </StyledLink>

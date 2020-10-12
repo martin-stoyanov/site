@@ -7,6 +7,7 @@ import { CMSXCard } from '../components/Cards/Work/CMSX/CMSX';
 import { BWCard } from '../components/Cards/Work/Bandwidth/BWCard';
 import { ViewFinder } from '../components/Cards/Projects/ViewFinder/ViewfinderCard';
 import { HyperparametersCard } from '../components/Cards/Projects/HyperparametersJS/HyperparametersCard';
+import { WebsiteCard } from '../components/Cards/Projects/Website/Website';
 import { CardHeader } from '../components/Cards/CardHeader';
 import { CardWrapper } from '../components/Cards/CardWrapper';
 
@@ -47,6 +48,7 @@ export default function UsersList() {
           <CardWrapper>
             <ViewFinder />
             <HyperparametersCard />
+            <WebsiteCard />
           </CardWrapper>
         </div>
       </span>

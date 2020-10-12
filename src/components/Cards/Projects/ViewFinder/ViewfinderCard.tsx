@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 import { CardMain } from '../CardMain';
 import { breakpoints } from '../../../../utils';
-// @ts-ignore
-import cornell_seal from './cornell_seal.png';
 
 const color = '#bbcaf6';
 

@@ -25,7 +25,6 @@ const CardDiv = styled.div`
   }
   width: 100%;
   max-width: 500px;
-  height: fill-available;
   display: flex;
   flex-direction: row;
   background: rgba(222, 177, 192, 0.1);

@@ -5,7 +5,6 @@ const StyledCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: fit-content;
   margin-left: 5vw;
   margin-right: 5vw;
 `;

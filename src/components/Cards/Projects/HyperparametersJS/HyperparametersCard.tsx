@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 import { CardMain } from '../CardMain';
 import { breakpoints } from '../../../../utils';
-// @ts-ignore
-import bw_logo from './bw_logo.png';
 
 const color = '#bbcaf6';
 

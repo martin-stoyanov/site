@@ -11,4 +11,11 @@ const CardMainDiv = styled.div`
   }
 `;
 
-export const CardMain = ({ children }) => <CardMainDiv>{children}</CardMainDiv>;
+const CardTags = styled.div``;
+
+export const CardMain = ({ children }) => (
+  <CardMainDiv>
+    {children}
+    <CardTags />
+  </CardMainDiv>
+);

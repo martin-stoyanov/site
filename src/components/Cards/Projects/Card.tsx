@@ -30,7 +30,7 @@ const CardDiv = styled.div`
   background: rgba(222, 177, 192, 0.1);
   text-align: center;
   padding: 2em;
-  padding-bottom: 3em;
+  padding-bottom: 0em;
   margin: 1em;
   border-radius: 3%;
   @media ${breakpoints.sm} {

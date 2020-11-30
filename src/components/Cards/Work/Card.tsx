@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { CardMain } from './CardMain';
+import { CardDiv } from '../CardDiv';
 import { breakpoints } from '../../../utils';
 
 const color = '#bbcaf6';
@@ -14,33 +15,6 @@ const CardParent = styled.div`
   }
   @media ${breakpoints.md} {
     min-width: 70vw;
-  }
-`;
-
-const CardDiv = styled.div`
-  border: 0.3rem solid #b3ccff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.3s ease-in-out;
-  &:hover {
-    box-shadow: 0 0 20px rgba(200, 200, 200, 0.3);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: row;
-  background: rgba(179, 204, 255, 0.2);
-  text-align: center;
-  padding: 2em;
-  padding-bottom: 0em;
-  margin: 1em;
-  border-radius: 3%;
-  @media ${breakpoints.sm} {
-    padding: 2em 1em;
-    margin: 1em;
-  }
-  @media ${breakpoints.sm} {
-    flex-direction: column;
   }
 `;
 
@@ -112,7 +86,11 @@ export const Card: React.FC<{
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       />
-      <CardDiv>
+      <CardDiv
+        borderColor="#b3ccff"
+        hoverShadow="0 0 20px rgba(200, 200, 200, 0.3)"
+        backgroundColor="rgba(179, 204, 255, 0.2)"
+      >
         {children}
         <CardMain>
           <CardTitle date={date}>{title}</CardTitle>

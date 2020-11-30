@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CardDiv } from '../CardDiv';
 import { breakpoints } from '../../../utils';
 
 const CardParent = styled.div`
@@ -15,39 +16,18 @@ const CardParent = styled.div`
   }
 `;
 
-const CardDiv = styled.div`
-  border: 0.3rem solid #deb1c0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  transition: box-shadow 0.3s ease-in-out;
-  &:hover {
-    box-shadow: 0 0 20px rgba(222, 177, 192, 0.4);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: row;
-  background: rgba(222, 177, 192, 0.1);
-  text-align: center;
-  padding: 2em;
-  padding-bottom: 0em;
-  margin: 1em;
-  border-radius: 3%;
-  @media ${breakpoints.sm} {
-    padding: 2em 1em;
-    margin: 1em;
-  }
-  @media ${breakpoints.sm} {
-    flex-direction: column;
-  }
-`;
-
 export const Card: React.FC = ({ children }) => (
   <CardParent>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <CardDiv>{children}</CardDiv>
+    <CardDiv
+      borderColor="#deb1c0"
+      hoverShadow="0 0 20px rgba(222, 177, 192, 0.4)"
+      backgroundColor="rgba(222, 177, 192, 0.1)"
+    >
+      {children}
+    </CardDiv>
   </CardParent>
 );

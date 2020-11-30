@@ -40,7 +40,7 @@ const CardBody = styled.p`
 export const WebsiteCard = () => (
   <Card>
     <CardMain>
-      <CardTitle>Martin's Website</CardTitle>
+      <CardTitle>This Website!</CardTitle>
       <IconList>
         <li>
           <IconLink
@@ -56,8 +56,7 @@ export const WebsiteCard = () => (
         I built this portfolio website with Gatsby, Tylescript and Styled
         Components. My goals for this site were to (1) learn Gatsby and Styled
         Components (2) Create a website using no external styling libraries (so
-        all CSS is written by me) and (3) have somewhere to show off my
-        projects!
+        all CSS is written by me) and (3) have somewhere to show off my projects
       </CardBody>
     </CardMain>
   </Card>

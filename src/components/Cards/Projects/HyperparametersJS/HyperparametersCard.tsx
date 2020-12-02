@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 import { CardMain } from '../CardMain';
 import { breakpoints } from '../../../../utils';
+import { CardTagsWrapper } from '../../CardTagsWrapper';
 
 const color = '#bbcaf6';
 
@@ -68,6 +69,11 @@ export const HyperparametersCard = () => (
         showcase examples of the library in action. I build the backend with
         Python, using Django, Postgres, and GraphQL
       </CardBody>
+      <CardTagsWrapper>
+        <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
+          Django, Python, Postgres, GraphQL, Gatsby, React
+        </p>
+      </CardTagsWrapper>
     </CardMain>
   </Card>
 );

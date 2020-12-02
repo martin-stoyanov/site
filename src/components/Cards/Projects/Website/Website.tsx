@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Card } from '../Card';
 import { CardMain } from '../CardMain';
+import { CardTagsWrapper } from '../../CardTagsWrapper';
 import { breakpoints } from '../../../../utils';
 
 const color = '#bbcaf6';
@@ -58,6 +59,11 @@ export const WebsiteCard = () => (
         Components (2) Create a website using no external styling libraries (so
         all CSS is written by me) and (3) have somewhere to show off my projects
       </CardBody>
+      <CardTagsWrapper>
+        <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
+          Gatsby, Styled Components, React, Typescript
+        </p>
+      </CardTagsWrapper>
     </CardMain>
   </Card>
 );

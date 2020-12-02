@@ -11,15 +11,4 @@ const CardMainDiv = styled.div`
   }
 `;
 
-const CardTags = styled.div`
-  padding-top: 1em;
-  padding-bottom: 1em;
-  text-align: right;
-`;
-
-export const CardMain = ({ children }) => (
-  <CardMainDiv>
-    {children}
-    <CardTags></CardTags>
-  </CardMainDiv>
-);
+export const CardMain = ({ children }) => <CardMainDiv>{children}</CardMainDiv>;

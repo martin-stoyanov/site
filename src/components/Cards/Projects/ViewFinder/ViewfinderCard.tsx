@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Card } from '../Card';
 import { CardMain } from '../CardMain';
 import { breakpoints } from '../../../../utils';
+import { CardTagsWrapper } from '../../CardTagsWrapper';
 
 const color = '#bbcaf6';
 
@@ -67,6 +68,11 @@ export const ViewFinder = () => (
         returns photo spots you might like! Note: the backend server uses
         Heroku's free tier so there will be a ~30 second startup delay
       </CardBody>
+      <CardTagsWrapper>
+        <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
+          Flask, Python, Axios, React
+        </p>
+      </CardTagsWrapper>
     </CardMain>
   </Card>
 );

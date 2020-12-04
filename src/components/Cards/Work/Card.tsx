@@ -40,7 +40,7 @@ const DownIcon = styled.i`
   }
 `;
 
-const CardTitle = styled.h2`
+export const CardTitle = styled.h2`
   font-size: 1.5rem;
   font-family: Roboto Mono, monospace;
   &:after {
@@ -54,13 +54,13 @@ const CardTitle = styled.h2`
   }
 `;
 
-const CardDescription = styled.p`
+export const CardDescription = styled.p`
   font-family: Roboto Mono, monospace;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: ${color};
 `;
 
-const CardBody = styled.p`
+export const CardBody = styled.p`
   margin-bottom: 0;
   font-size: 1rem;
   @media ${breakpoints.sm} {
@@ -71,13 +71,7 @@ const CardBody = styled.p`
   line-height: 1.5;
 `;
 
-export const Card: React.FC<{
-  title: string;
-  description: string;
-  date: string;
-  shortText: JSX.Element;
-  expandedText?: JSX.Element;
-}> = ({ title, description, shortText, expandedText, date, children }) => {
+export const Card: React.FC = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -92,11 +86,6 @@ export const Card: React.FC<{
         backgroundColor="rgba(179, 204, 255, 0.2)"
       >
         {children}
-        <CardMain>
-          <CardTitle date={date}>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
-          <CardBody>{isExpanded ? expandedText : shortText}</CardBody>
-        </CardMain>
       </CardDiv>
       {/* <DownIconWrapper
         isExpanded={isExpanded}

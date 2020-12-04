@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card } from '../Card';
+import { Card, CardBody, CardDescription, CardTitle } from '../Card';
 import { CardIntro } from '../CardIntro';
 import { breakpoints } from '../../../../utils';
+import { CardTagsWrapper } from '../../CardTagsWrapper';
 // @ts-ignore
 import cornell_seal from './cornell_seal.png';
+import { CardMain } from '../CardMain';
 
 const color = '#bbcaf6';
 
@@ -74,13 +76,7 @@ const expandedText = () => (
 );
 
 export const CMSXCard = () => (
-  <Card
-    title="Cornell University"
-    description="Software Developer"
-    date="October 2019 - Present"
-    shortText={shortText()}
-    expandedText={expandedText()}
-  >
+  <Card>
     <CardIntro>
       <CardImage src={cornell_seal} alt="" />
       <IconList>
@@ -95,10 +91,20 @@ export const CMSXCard = () => (
         </li>
       </IconList>
     </CardIntro>
-    {/* <CardMain>
-        <CardTitle>Cornell University</CardTitle>
-        <CardDescription>Software Developer</CardDescription>
-        <CardBody>{shortBody}</CardBody>
-      </CardMain> */}
+    <CardMain>
+      <CardTitle date="October 2019 - Present">Cornell University.</CardTitle>
+      <CardDescription>Software Development Lead</CardDescription>
+      <CardBody>
+        Frontend lead for the team that develops and maintains Cornell’s
+        in-house Course Management System, used by over 8000 students and course
+        staff every semester. Currently leading projects to improve initial load
+        time, improve code reuse, and rewrite the user documentation site.
+      </CardBody>
+      <CardTagsWrapper>
+        <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
+          React, Typescript, Java
+        </p>
+      </CardTagsWrapper>
+    </CardMain>
   </Card>
 );

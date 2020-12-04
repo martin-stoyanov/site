@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Card } from '../Card';
+import { Card, CardBody, CardDescription, CardTitle } from '../Card';
 import { CardIntro } from '../CardIntro';
+import { CardMain } from '../CardMain';
+import { CardTagsWrapper } from '../../../Cards/CardTagsWrapper';
 import { breakpoints } from '../../../../utils';
 // @ts-ignore
 import bw_logo from './bw_logo.png';
@@ -71,15 +73,10 @@ const expandedText = () => (
     </ul>
   </div>
 );
+// Software Dev Intern (Remote)
 
 export const BWCard = () => (
-  <Card
-    title="Bandwidth Inc."
-    date="May 2020 - July 2020"
-    description="Software Dev Intern (Remote)"
-    shortText={shortText()}
-    expandedText={expandedText()}
-  >
+  <Card>
     <CardIntro>
       <CardImage src={bw_logo} alt="" />
       <IconList>
@@ -94,5 +91,20 @@ export const BWCard = () => (
         </li>
       </IconList>
     </CardIntro>
+    <CardMain>
+      <CardTitle date="May 2020 - July 2020">Bandwidth Inc.</CardTitle>
+      <CardDescription>Software Dev Intern (Remote)</CardDescription>
+      <CardBody>
+        Worked with the frontend team on the Bandwidth Dashboard, one of the
+        company's main products and used by clients to purchase and manage
+        orders. Gained experience contributing a live production codebase and
+        creating tests for it
+      </CardBody>
+      <CardTagsWrapper>
+        <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
+          Gatsby, Styled Components, React, Typescript
+        </p>
+      </CardTagsWrapper>
+    </CardMain>
   </Card>
 );

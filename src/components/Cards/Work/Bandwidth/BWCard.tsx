@@ -102,7 +102,7 @@ export const BWCard = () => (
       </CardBody>
       <CardTagsWrapper>
         <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
-          Gatsby, Styled Components, React, Typescript
+          React, Typescript, Material UI, Jest, Cypress
         </p>
       </CardTagsWrapper>
     </CardMain>

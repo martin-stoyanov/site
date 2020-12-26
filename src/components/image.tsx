@@ -1,6 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+// @ts-ignore
+import logo from '../images/pinguino.png';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -27,10 +29,7 @@ const Image = (props) => {
   `);
 
   return (
-    <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{ width: props.maxWidth, borderRadius: '50%' }}
-    />
+    <img style={{ width: props.maxWidth, borderRadius: '50%' }} src={logo} />
   );
 };
 

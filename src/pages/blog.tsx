@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 
@@ -19,9 +18,7 @@ const IndexPage = () => (
         alt="construction dog"
         style={{ maxWidth: '200px', borderRadius: '10px' }}
       />
-      <Link to="/blog/blog1/" style={{ marginTop: '20px', color: 'white' }}>
-        First Post
-      </Link>
+      {/* <Link to="/blogs/blog1/">Go to "Using TypeScript"</Link> */}
     </div>
   </Layout>
 );

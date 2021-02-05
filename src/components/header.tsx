@@ -85,6 +85,7 @@ const ToggleBar = styled.span`
   background-color: white;
   border-radius: 10px;
   display: none;
+  transition: transform 0.5s;
   @media ${breakpoints.sm} {
     display: flex;
   }
@@ -132,9 +133,29 @@ export const Header: React.FC = () => {
         </ImageWrapper>
       </Link>
       <ToggleButton href="#" onClick={() => setToggleOpen(!toggleOpen)}>
-        <ToggleBar />
-        <ToggleBar />
-        <ToggleBar />
+        <ToggleBar
+          style={
+            toggleOpen
+              ? {
+                  transform: 'rotate(45deg)',
+                  position: 'relative',
+                  top: '18px',
+                }
+              : { display: 'flex' }
+          }
+        />
+        <ToggleBar
+          style={
+            toggleOpen
+              ? {
+                  transform: 'rotate(135deg)',
+                }
+              : { display: 'flex' }
+          }
+        />
+        <ToggleBar
+          style={toggleOpen ? { display: 'none' } : { display: 'flex' }}
+        />
       </ToggleButton>
       <StyledNav toggleOpen={toggleOpen}>
         <NavUL toggleOpen={toggleOpen}>

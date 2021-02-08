@@ -36,6 +36,7 @@ const StyledLink = styled((props) => <Link {...props} />)`
 `;
 
 const StyledNav = styled.nav`
+  transition: all 0.6s ease-out;
   float: right;
   @media ${breakpoints.sm} {
     width: 100%;
@@ -69,7 +70,7 @@ const ToggleButton = styled.a`
   top: 0.75rem;
   right: 1rem;
   padding: 25px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -121,7 +122,6 @@ export const Header: React.FC = () => {
   const [toggleOpen, setToggleOpen] = useState<boolean>(false);
 
   const changeToggle = () => {
-    console.log('toggle changeing');
     setToggleOpen(!toggleOpen);
   };
 

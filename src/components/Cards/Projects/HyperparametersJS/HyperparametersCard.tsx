@@ -32,7 +32,7 @@ const CardBody = styled.p`
   font-size: 1rem;
   @media ${breakpoints.sm} {
     font-size: 0.85rem;
-    margin-bottom: 2em;
+    margin-bottom: 0em;
   }
   color: ${color};
   line-height: 1.5;
@@ -70,7 +70,12 @@ export const HyperparametersCard = () => (
         Python, using Django, Postgres, and GraphQL
       </CardBody>
       <CardTagsWrapper>
-        <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>
+        <p
+          style={{
+            fontFamily: 'Roboto Mono, monospace',
+            fontSize: '12px',
+          }}
+        >
           Django, Python, Postgres, GraphQL, Gatsby, React
         </p>
       </CardTagsWrapper>

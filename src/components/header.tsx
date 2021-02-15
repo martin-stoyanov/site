@@ -136,22 +136,19 @@ export const Header: React.FC = () => {
       <ToggleButton href="#" onClick={() => setToggleOpen(!toggleOpen)}>
         <ToggleBar
           style={{
-            display: 'flex',
             transform: toggleOpen ? 'rotate(-45deg)' : 'rotate(0deg)',
             transformOrigin: '100% 50%',
           }}
         />
         <ToggleBar
           style={{
-            display: 'flex',
             opacity: toggleOpen ? '0' : '100',
-            transform: toggleOpen ? 'rotate(-45deg)' : 'rotate(0)',
+            width: toggleOpen ? '0px' : '30px',
             transition: 'all 0.5s',
           }}
         />
         <ToggleBar
           style={{
-            display: 'flex',
             transform: toggleOpen ? 'rotate(45deg)' : 'rotate(0)',
             transformOrigin: '100% 50%',
           }}

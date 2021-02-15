@@ -74,7 +74,8 @@ const ToggleButton = styled.a`
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 21px;
+  height: 24.5px;
+  transition: all 0.5s;
   @media ${breakpoints.sm} {
     display: flex;
   }
@@ -134,27 +135,26 @@ export const Header: React.FC = () => {
       </Link>
       <ToggleButton href="#" onClick={() => setToggleOpen(!toggleOpen)}>
         <ToggleBar
-          style={
-            toggleOpen
-              ? {
-                  transform: 'rotate(45deg)',
-                  position: 'relative',
-                  top: '18px',
-                }
-              : { display: 'flex' }
-          }
+          style={{
+            display: 'flex',
+            transform: toggleOpen ? 'rotate(-45deg)' : 'rotate(0deg)',
+            transformOrigin: '100% 50%',
+          }}
         />
         <ToggleBar
-          style={
-            toggleOpen
-              ? {
-                  transform: 'rotate(135deg)',
-                }
-              : { display: 'flex' }
-          }
+          style={{
+            display: 'flex',
+            opacity: toggleOpen ? '0' : '100',
+            transform: toggleOpen ? 'rotate(-45deg)' : 'rotate(0)',
+            transition: 'all 0.5s',
+          }}
         />
         <ToggleBar
-          style={toggleOpen ? { display: 'none' } : { display: 'flex' }}
+          style={{
+            display: 'flex',
+            transform: toggleOpen ? 'rotate(45deg)' : 'rotate(0)',
+            transformOrigin: '100% 50%',
+          }}
         />
       </ToggleButton>
       <StyledNav toggleOpen={toggleOpen}>

@@ -35,14 +35,6 @@ const StyledLink = styled((props) => <Link {...props} />)`
   }
 `;
 
-const StyledNav = styled.nav`
-  transition: all 0.6s ease-out;
-  float: right;
-  @media ${breakpoints.sm} {
-    width: 100%;
-  }
-`;
-
 const ImageWrapper = styled.div`
   float: left;
   width: 50px;
@@ -62,6 +54,8 @@ const HeaderWrapper = styled.header`
   @media ${breakpoints.sm} {
     flex-direction: column;
     align-items: flex-start;
+    transition: height 0.36s ease;
+    height: ${(props) => (props.toggleOpen ? '270px' : '100px')};
   }
 `;
 
@@ -93,14 +87,24 @@ const ToggleBar = styled.span`
   }
 `;
 
+const StyledNav = styled.nav`
+  float: right;
+  @media ${breakpoints.sm} {
+    width: 100%;
+  }
+`;
+
 const NavUL = styled.ul`
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   @media ${breakpoints.sm} {
-    display: ${(props) => (props.toggleOpen ? 'flex;' : 'none')};
+    display: flex;
     flex-direction: column;
+    transition: transform 0.36s ease;
+    transform-origin: top;
+    transform: ${(props) => (props.toggleOpen ? 'scaleY(1)' : 'scaleY(0)')};
   }
 `;
 
@@ -116,6 +120,7 @@ const NavLI = styled.li`
     padding-bottom: 20px;
     text-align: center;
     flex-direction: row;
+    display: ${(props) => (props.toggleOpen ? 'inline-block' : 'none')};
   }
 `;
 
@@ -127,7 +132,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper toggleOpen={toggleOpen}>
       <Link to="/">
         <ImageWrapper>
           <Image maxWidth="50px" style={{ border: '4px solid red' }} />
@@ -156,16 +161,16 @@ export const Header: React.FC = () => {
       </ToggleButton>
       <StyledNav toggleOpen={toggleOpen}>
         <NavUL toggleOpen={toggleOpen}>
-          <NavLI onClick={changeToggle}>
+          <NavLI toggleOpen={toggleOpen} onClick={changeToggle}>
             <StyledLink to="/#work">Work</StyledLink>
           </NavLI>
-          <NavLI onClick={changeToggle}>
+          <NavLI toggleOpen={toggleOpen} onClick={changeToggle}>
             <StyledLink to="/#projects">Projects</StyledLink>
           </NavLI>
-          <NavLI onClick={changeToggle}>
+          <NavLI toggleOpen={toggleOpen} onClick={changeToggle}>
             <StyledLink to="/blog">Blog</StyledLink>
           </NavLI>
-          <NavLI onClick={changeToggle}>
+          <NavLI toggleOpen={toggleOpen} onClick={changeToggle}>
             <StyledLink to="https://github.com/martin-stoyanov" target="_blank">
               Github
             </StyledLink>

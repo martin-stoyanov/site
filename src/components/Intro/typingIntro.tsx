@@ -30,6 +30,7 @@ const TypedText = styled.div`
 
 const TypedDivWrapper = styled.div`
   height: 20vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;

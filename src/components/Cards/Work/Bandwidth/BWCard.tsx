@@ -92,13 +92,14 @@ export const BWCard = () => (
       </IconList>
     </CardIntro>
     <CardMain>
-      <CardTitle date="May 2020 - July 2020">Bandwidth Inc.</CardTitle>
-      <CardDescription>Software Dev Intern (Remote)</CardDescription>
+      <CardTitle date="May 2020 - July 2020, August 2021-Present">
+        Bandwidth Inc.
+      </CardTitle>
+      <CardDescription>Frontend Software Developer</CardDescription>
       <CardBody>
-        Worked with the frontend team on the Bandwidth Dashboard, one of the
-        company's main products and used by clients to purchase and manage
-        orders. Gained experience contributing a live production codebase and
-        creating tests for it
+        Working on the Bandwidth Dashboard, one of the company's main products
+        and used by clients to purchase and manage orders. Contributing to a
+        live production codebase and creating tests for it
       </CardBody>
       <CardTagsWrapper>
         <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>

@@ -92,7 +92,7 @@ export const CMSXCard = () => (
       </IconList>
     </CardIntro>
     <CardMain>
-      <CardTitle date="October 2019 - Present">Cornell University.</CardTitle>
+      <CardTitle date="October 2019 - May 2021">Cornell University.</CardTitle>
       <CardDescription>Software Development Lead</CardDescription>
       <CardBody>
         Frontend lead for the team that develops and maintains Cornell’s

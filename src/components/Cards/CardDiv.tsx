@@ -14,7 +14,7 @@ const Div = styled.div`
   max-width: 500px;
   display: flex;
   flex-direction: row;
-  background: ${(p) => p.backgroundColor};
+  background: ${(p: { backgroundColor: any }) => p.backgroundColor};
   text-align: center;
   padding: 2em;
   padding-bottom: 0em;

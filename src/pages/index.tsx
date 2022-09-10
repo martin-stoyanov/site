@@ -9,7 +9,7 @@ import { ViewFinder } from '../components/Cards/Projects/ViewFinder/ViewfinderCa
 import { HyperparametersCard } from '../components/Cards/Projects/HyperparametersJS/HyperparametersCard';
 import { WebsiteCard } from '../components/Cards/Projects/Website/Website';
 import { CardHeader } from '../components/Cards/CardHeader';
-import { CardWrapper } from '../components/Cards/CardWrapper';
+import { CardsMain } from '../components/Cards/CardsMain';
 
 export default function UsersList() {
   return (
@@ -31,10 +31,10 @@ export default function UsersList() {
           }}
         >
           <CardHeader color="#b3ccff">Work Experience</CardHeader>
-          <CardWrapper>
+          <CardsMain>
             <CMSXCard />
             <BWCard />
-          </CardWrapper>
+          </CardsMain>
         </div>
       </span>
       <span id="projects">
@@ -45,11 +45,11 @@ export default function UsersList() {
           }}
         >
           <CardHeader color="#deb1c0">Projects</CardHeader>
-          <CardWrapper>
+          <CardsMain>
             <ViewFinder />
             <HyperparametersCard />
             <WebsiteCard />
-          </CardWrapper>
+          </CardsMain>
         </div>
       </span>
     </Layout>

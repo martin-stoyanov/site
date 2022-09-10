@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledCardWrapper = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -9,6 +9,4 @@ const StyledCardWrapper = styled.div`
   margin-right: 5vw;
 `;
 
-export const CardWrapper = ({ children }) => (
-  <StyledCardWrapper>{children}</StyledCardWrapper>
-);
+export const CardsMain = ({ children }) => <StyledDiv>{children}</StyledDiv>;

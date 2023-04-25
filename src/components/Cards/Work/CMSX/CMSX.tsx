@@ -82,7 +82,7 @@ export const CMSXCard = () => (
       <IconList>
         <li>
           <IconLink
-            href="https://research.cs.cornell.edu/Projects/cms/"
+            href="https://www.cs.cornell.edu/projects/cms/cmsx/"
             target="_blank"
             style={{ ariaLabel: 'Project Link' }}
           >

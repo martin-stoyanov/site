@@ -13,7 +13,7 @@ const IndexPage = () => (
       <h1>Ruh roh!</h1>
       <p>This blog is a work in progress</p>
       <img
-        src="https://tinyurl.com/yyrd2npd"
+        src="https://tinyurl.com/mr2vhezv"
         loading="lazy"
         alt="construction dog"
         style={{ maxWidth: '200px', borderRadius: '10px' }}

@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 export default function Layout({ children }) {
   return (
     <ThemeProvider
-      theme={{ fontFamily: 'Montserrat, sans-serif', color: 'dark' }}
+      theme={{ fontFamily: 'Montserrat, Roboto, sans-serif', color: 'dark' }}
     >
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"

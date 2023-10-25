@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { breakpoints } from '../../utils';
+import { breakpoints } from '../../../utils';
 
-import Layout from '../../components/layout';
+import Layout from '../../../components/layout';
 
 const BlogWrapper = styled.div`
   display: grid;
@@ -17,7 +17,7 @@ const BlogWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
     <BlogWrapper>
-      <h2>Title</h2>
+      <h2>Title 2</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorum
         optio, dolores repellendus porro sapiente quod consequuntur dicta

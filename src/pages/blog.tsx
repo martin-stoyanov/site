@@ -58,7 +58,7 @@ const IndexPage = () => (
         >
           <BlogLinkWrapper>
             <LinkText>Creating the blog section of my site</LinkText>
-            <LinkText>October 14, 2023</LinkText>
+            <LinkText>October 24, 2023</LinkText>
           </BlogLinkWrapper>
         </Link>
         {/* <Link

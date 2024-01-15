@@ -5,6 +5,7 @@ import { TypingIntro } from '../components/Intro/typingIntro';
 import { TextIntro } from '../components/Intro/textIntro';
 import { CMSXCard } from '../components/Cards/Work/CMSX/CMSX';
 import { BWCard } from '../components/Cards/Work/Bandwidth/BWCard';
+import { S1Card } from '../components/Cards/Work/SentinelOne/S1Card';
 import { ViewFinder } from '../components/Cards/Projects/ViewFinder/ViewfinderCard';
 import { HyperparametersCard } from '../components/Cards/Projects/HyperparametersJS/HyperparametersCard';
 import { WebsiteCard } from '../components/Cards/Projects/Website/Website';
@@ -34,6 +35,7 @@ export default function UsersList() {
           <CardsMain>
             <CMSXCard />
             <BWCard />
+            <S1Card />
           </CardsMain>
         </div>
       </span>

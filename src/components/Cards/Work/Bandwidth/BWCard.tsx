@@ -92,14 +92,18 @@ export const BWCard = () => (
       </IconList>
     </CardIntro>
     <CardMain>
-      <CardTitle date="May 2020 - July 2020, August 2021-Present">
+      <CardTitle date="May 2020 - July 2020, August 2021 - December 2023">
         Bandwidth Inc.
       </CardTitle>
-      <CardDescription>Frontend Software Developer</CardDescription>
+      <CardDescription>Software Developer II</CardDescription>
       <CardBody>
-        Working on the Bandwidth Dashboard, one of the company's main products
-        and used by clients to purchase and manage orders. Contributing to a
-        live production codebase and creating tests for it
+        Worked on company’s web dashboard, which is built with React,
+        Typescript, Redux, and SWR. Created unit, functional, and integration
+        tests using Jest, React Testing Library, & Cypress.{' '}
+        <p style={{ marginTop: '8px' }}>
+          Front-end lead on initiative to globalize the company’s dashboard to
+          support international customers
+        </p>
       </CardBody>
       <CardTagsWrapper>
         <p style={{ fontFamily: 'Roboto Mono, monospace', fontSize: '12px' }}>

@@ -29,7 +29,7 @@ export const TextIntro = () => (
     <IntroContent>
       <div>
         I'm a software developer who likes Javascript, React, and UX. I'm
-        currently a frontend developer at Sentinelone
+        currently a frontend developer at SentinelOne Inc.
       </div>
     </IntroContent>
   </IntroWrapper>

@@ -26,14 +26,12 @@ const IconLink = styled.a`
 `;
 
 const CardImage = styled.img`
-  width: 100px;
+  width: 70px;
   margin-bottom: 1em;
   @media ${breakpoints.md} {
     width: 80px;
     margin-bottom: 0.5em;
   }
-  border-radius: 50%;
-  // border: 5px solid white;
 `;
 
 const shortText = () => <span></span>;

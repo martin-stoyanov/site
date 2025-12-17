@@ -103,8 +103,15 @@ export function LetterboxdFeed() {
     )
   }
 
-  if (error) {
-    return null
+  if (error || (!recentMovie && !recent5Star)) {
+    return (
+      <div className="mb-8 p-6 bg-light-purple/10 rounded-lg border border-light-purple/30">
+        <h2 className="text-lg font-mono text-light-purple mb-4">🎬 Recently Watched</h2>
+        <p className="text-gray-400 text-sm">
+          Check out my <a href="https://letterboxd.com/martinooooooooo/" target="_blank" rel="noopener noreferrer" className="text-light-purple hover:underline">Letterboxd profile</a> to see what I've been watching.
+        </p>
+      </div>
+    )
   }
 
   return (

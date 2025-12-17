@@ -85,8 +85,20 @@ export function LetterboxdFeed() {
 
   if (loading) {
     return (
-      <div className="text-center text-gray-400 py-4">
-        Loading movies...
+      <div className="mb-8 p-6 bg-light-purple/10 rounded-lg border border-light-purple/30">
+        <div className="h-6 w-48 bg-light-purple/20 rounded animate-pulse mb-4" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="p-4 bg-dark/50 rounded">
+            <div className="h-3 w-16 bg-gray-600/50 rounded animate-pulse mb-2" />
+            <div className="h-5 w-32 bg-gray-500/50 rounded animate-pulse mb-2" />
+            <div className="h-4 w-40 bg-gray-600/50 rounded animate-pulse" />
+          </div>
+          <div className="p-4 bg-dark/50 rounded">
+            <div className="h-3 w-20 bg-gray-600/50 rounded animate-pulse mb-2" />
+            <div className="h-5 w-28 bg-gray-500/50 rounded animate-pulse mb-2" />
+            <div className="h-4 w-36 bg-gray-600/50 rounded animate-pulse" />
+          </div>
+        </div>
       </div>
     )
   }

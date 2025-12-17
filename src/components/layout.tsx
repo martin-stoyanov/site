@@ -1,31 +1,15 @@
-import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { Header } from './header';
+import { ReactNode } from 'react'
+import Header from './Header'
 
-// current Font families: Roboto Mono, Montserrat, and Open Sans
-const GlobalStyle = createGlobalStyle`
-  body {
-    font-family: ${(p) => p.theme.fontFamily};
-    background: ${(p) => (p.theme.color === 'dark' ? '#282C35' : 'white')};
-    color: ${(p) => (p.theme.color === 'dark' ? 'white' : '#282C35')};
-    display: grid;
-    place-items: center;
-    margin: auto;
-    overflow-x: hidden;
-  }
-`;
-export default function Layout({ children }) {
+interface LayoutProps {
+  children: ReactNode
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
-    <ThemeProvider
-      theme={{ fontFamily: 'Montserrat, Roboto, sans-serif', color: 'dark' }}
-    >
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-        rel="stylesheet"
-      />
-      <GlobalStyle />
+    <div className="min-h-screen bg-dark text-white">
       <Header />
-      {children}
-    </ThemeProvider>
-  );
+      <main>{children}</main>
+    </div>
+  )
 }

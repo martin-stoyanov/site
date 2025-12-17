@@ -12,9 +12,9 @@ import bwLogo from '../assets/images/bw_logo.png'
 import s1Logo from '../assets/images/s1logo.png'
 
 // Photography
-import vitosha from '../assets/images/photography/vitosha.png'
-import nevsky from '../assets/images/photography/nevsky.png'
-import dcSunset from '../assets/images/photography/dc-sunset.png'
+import vitosha from '../assets/images/photography/vitosha.jpg'
+import nevsky from '../assets/images/photography/nevsky.jpg'
+import dcSunset from '../assets/images/photography/dc-sunset.jpg'
 
 export default function Home() {
   return (
@@ -116,8 +116,8 @@ export default function Home() {
             <h3 className="text-lg font-mono text-light-purple mb-4">📷 Recent Photos</h3>
             <PhotoGallery
               photos={[
-                { src: vitosha, alt: 'Vitosha mountain', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Vitosha Mountain, Sofia, BG', date: 'Oct 2025' },
                 { src: nevsky, alt: 'Alexander Nevsky Cathedral', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Nevsky Cathedral, Sofia, BG', date: 'Oct 2025' },
+                { src: vitosha, alt: 'Vitosha mountain', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Vitosha Mountain, Sofia, BG', date: 'Oct 2025' },
                 { src: dcSunset, alt: 'DC Sunset', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Washington DC', date: 'Nov 2025' },
               ]}
             />

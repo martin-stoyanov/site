@@ -16,7 +16,7 @@ export function LetterboxdFeed() {
   useEffect(() => {
     async function fetchFeed() {
       try {
-        const corsProxy = 'https://api.allorigins.win/raw?url='
+        const corsProxy = 'https://corsproxy.io/?'
         const feedUrl = encodeURIComponent('https://letterboxd.com/martinooooooooo/rss')
         const response = await fetch(`${corsProxy}${feedUrl}`)
         

@@ -102,7 +102,7 @@ export default function Home() {
         <SectionHeader color="#c6b3ff">About Me</SectionHeader>
         <div className="max-w-4xl mx-auto px-8 mt-8">
           <p className="text-lg text-gray-200 leading-relaxed mb-6">
-            I'm a frontend developer with 5+ years of experience building web applications at places like SentinelOne, Bandwidth, and at Cornell University. I specialize in React, TypeScript, and modern frontend tooling, with a focus on accessibility, testing, and delivering polished user experiences.
+            I'm a frontend developer with 5+ years of experience building web applications at SentinelOne, Bandwidth, and at Cornell University. I specialize in React, TypeScript, and modern frontend tooling, with a focus on accessibility, testing, and delivering polished user experiences.
           </p>
           <p className="text-lg text-gray-200 leading-relaxed mb-8">
             Outside of work, I love traveling, board games, and getting into unfamiliar situations, and I'm getting into photography. 

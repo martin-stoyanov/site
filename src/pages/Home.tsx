@@ -15,6 +15,7 @@ import s1Logo from '../assets/images/s1logo.png'
 import vitosha from '../assets/images/photography/vitosha.jpg'
 import nevsky from '../assets/images/photography/nevsky.jpg'
 import dcSunset from '../assets/images/photography/dc-sunset.jpg'
+import chiangDao from '../assets/images/photography/chiang-dao.jpg'
 
 export default function Home() {
   return (
@@ -89,6 +90,13 @@ export default function Home() {
             github="https://github.com/martin-stoyanov/hyperparameters-site"
           />
           <ProjectCard
+            title="Friend Challenges"
+            description="A weekly viral friend & couple challenge app. AI-powered challenge sourcing via Claude, with deduplication and automated weekly generation via GitHub Actions. Features a fun neon theme with animations."
+            tags="TypeScript, Vite, shadcn, Claude API"
+            link="https://friendchallenges.martinstoyanov.dev"
+            github="https://github.com/martin-stoyanov/friend-challenges"
+          />
+          <ProjectCard
             title="This Website!"
             description="I built this portfolio website with Vite, React, TypeScript, and Tailwind CSS. It's a place to show off my projects and share my thoughts."
             tags="Vite, React, TypeScript, Tailwind CSS"
@@ -116,10 +124,12 @@ export default function Home() {
             <h3 className="text-lg font-mono text-light-purple mb-4">📷 Recent Photos</h3>
             <PhotoGallery
               photos={[
+                { src: chiangDao, alt: 'Yellow flowers along a road in Chiang Dao', camera: 'Smena 8m', film: 'Fujifilm 200', location: 'Chiang Dao, Thailand', date: 'Mar 2026' },
                 { src: nevsky, alt: 'Alexander Nevsky Cathedral', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Nevsky Cathedral, Sofia, BG', date: 'Oct 2025' },
                 { src: vitosha, alt: 'Vitosha mountain', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Vitosha Mountain, Sofia, BG', date: 'Oct 2025' },
                 { src: dcSunset, alt: 'DC Sunset', camera: 'Smena 8m', film: 'Harman Phoenix', location: 'Washington DC', date: 'Nov 2025' },
               ]}
+              initialCount={3}
             />
           </div>
         </div>

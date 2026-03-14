@@ -11,15 +11,20 @@ interface Photo {
 
 interface PhotoGalleryProps {
   photos: Photo[]
+  initialCount?: number
 }
 
-export function PhotoGallery({ photos }: PhotoGalleryProps) {
+export function PhotoGallery({ photos, initialCount }: PhotoGalleryProps) {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
+  const [showAll, setShowAll] = useState(false)
+
+  const visiblePhotos = initialCount && !showAll ? photos.slice(0, initialCount) : photos
+  const hasMore = initialCount ? photos.length > initialCount : false
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {photos.map((photo, index) => (
+        {visiblePhotos.map((photo, index) => (
           <div key={index} className="flex flex-col bg-dark/50 rounded-lg overflow-hidden">
             <button
               onClick={() => setSelectedPhoto(photo)}
@@ -50,6 +55,18 @@ export function PhotoGallery({ photos }: PhotoGalleryProps) {
           </div>
         ))}
       </div>
+
+      {/* View All / Show Less */}
+      {hasMore && (
+        <div className="mt-4 text-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="font-mono text-sm text-light-purple hover:text-white border border-light-purple/40 hover:border-light-purple px-4 py-2 rounded-lg transition-colors cursor-pointer"
+          >
+            {showAll ? 'Show less' : `View all (${photos.length})`}
+          </button>
+        </div>
+      )}
 
       {/* Lightbox Modal */}
       {selectedPhoto && (
